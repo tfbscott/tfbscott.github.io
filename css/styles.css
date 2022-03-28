@@ -1,0 +1,309 @@
+/*DEFINE VARIABLES HERE*/
+:root{
+	--primary-color: #006783;
+	--on-primary-color: #FFFFFF;
+	--primary-container-color: #B7EAFF;
+	--secondary-container-color: #CFE6F1;
+	--on-primary-container-color: #001F2A;
+	--tertiary-color: #5B5B7E;
+	--background-color: #FBFCFE;
+	
+	--border-radius: 45px;
+	
+}
+
+/*This affects the ENTIRE page*/
+html 
+{
+	font-size:20px;
+	font-family: 'Roboto', sans-serif;
+	
+	background:  var(--background-color);
+
+}
+
+
+/*PUT ANYTHING YOU WANT TO BE PRIMARY COLOR HERE*/
+.Header, .SectionHeader, .Footer
+{
+	background: var(--primary-color);
+}
+/*ON PRIMARY*/
+.PageHeader, .SectionHeader, .FooterText, .FooterLink
+{
+	color: var(--on-primary-color);
+}
+/*PRIMARY CONTAINER*/
+.Card, .FullCard, .FullScreenCard
+{
+	background: var(--primary-container-color);
+}
+/*ON PRIMARY CONTAIER*/
+.BlockText, .BlockTitle
+{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	color: var(--on-primary-container-color);
+}
+/*tertiary Color*/
+.SectionBackground, .UnderHeader
+{
+	/*background: var(--tertiary-color);*/
+}
+
+
+/*Set the headers height*/
+.Header, .UnderHeader
+{
+	width: 100%;
+	height: 120px;
+}
+
+
+/*
+p is the html element we want to modify (paragraph
+color is the property
+red is the value
+*/
+/*
+You can select specific IDs
+using #
+#myid will get <p id="myid">
+You can create classes using .
+.myclass would create as class
+*/
+
+.Header
+{
+	
+	position: fixed;
+
+	left: 0px;
+	top: 0px;
+	
+	padding: 0px 0px;
+	
+	border-radius: 0px 0px var(--border-radius) 0px;
+	
+	/*border-radius: 60px;*/
+}
+
+
+.Footer
+{
+	position: relative;
+	padding: 20px 40px;
+	bottom: 0px;
+	
+	border-radius: 0px var(--border-radius) 0px 0px;
+}
+
+
+img, #Img_Me
+{
+	float:right;
+	
+	
+	margin: 10px 30px;
+	
+	display: inline-block;
+	
+	border-radius: var(--border-radius);
+	
+	border: 5px solid var(--on-primary-container-color);
+}
+
+img
+{
+	max-width:420px;
+	max-height:280x;
+	
+	clear: right;
+	
+	
+}
+
+#Img_Me
+{
+	max-width:400px;
+	max-height:400x;
+}
+
+
+.Section, .FullSection
+{	
+	width: 100%;
+}
+
+.FullSection
+{
+}
+
+.FullCard
+{
+	
+	border-radius: var(--border-radius);
+	
+	padding: 20px 20px 20px 20px;
+	margin: 18px 20px;
+	
+	min-height: 68vh;
+	
+}
+
+.Card
+{
+	flex: 0 0 auto;
+	
+	width: 300px;
+	
+	border-radius: var(--border-radius);
+	
+	padding: 20px 20px 20px 20px;
+	margin: 18px 20px;
+	
+	
+	
+}
+
+a.Card
+{
+	text-decoration: none;
+	
+	transition: background .25s;
+}
+
+a.Card:hover
+{
+	background: var(--secondary-container-color);
+}
+
+
+
+
+.PageHeader
+{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 57px;
+	line-height: 64px;
+	/* identical to box height, or 112% */
+	
+	align-items: center;
+	letter-spacing: -0.25px;
+	
+	padding: 0px 20px;
+}
+
+.SectionHeader
+{
+	/* material-theme/headline/large */
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 40px;
+	/* identical to box height, or 125% */
+	
+	padding: 20px 40px;
+	margin: 0px 0px;
+	
+	/* material-theme/sys/light/on-surface */
+	
+	border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+}
+
+.SectionBackground
+{
+	width: 100%;
+	height: 424px;
+
+	
+	display: flex;
+	flex-wrap: nowrap;
+	
+	overflow-y: visible;
+	overflow-x:auto;
+}
+
+
+.BlockTitle
+{
+
+/* material-theme/title/large */
+
+	font-size: 22px;
+	line-height: 28px;
+/* or 127% */
+
+}
+
+.BlockText
+{
+	
+/* material-theme/body/large */
+	
+	font-size: 16px;
+	line-height: 24px;
+	/* or 150% */
+	
+	letter-spacing: 0.5px;
+	
+}
+
+
+.FooterText, .FooterLink
+{
+	font-size: 16px;
+	line-height: 24px;
+	/* or 150% */
+	
+	letter-spacing: 0.5px;
+}
+
+.FooterLink
+{
+	margin: 0px 20px 20px 20px;
+}
+
+.Link
+{
+	text-align: center;
+}
+
+.ContactButton
+{
+	position: absolute;
+	
+	text-decoration: none;
+	
+	right: 0px;
+	top: 0px;
+
+	padding: 10px 10px 10px 10px;
+	
+	margin: 30px 20px;
+
+	/* material-theme/sys/light/on-primary */
+
+	border: 3px solid var(--on-primary-color);
+	box-sizing: border-box;
+	border-radius: 10px;
+	
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 44px;
+	/* or 122% */
+	
+	align-items: center;
+	text-align: center;
+	
+	/* material-theme/sys/light/on-primary */
+	
+	color: var(--on-primary-color);
+}

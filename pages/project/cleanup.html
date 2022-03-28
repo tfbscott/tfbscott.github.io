@@ -1,0 +1,69 @@
+<html>
+	<head>  
+		<!-- User doesn't see stuff in head -->
+		<meta charset="utf-8">
+		<title>Scott's Portfolio Website</title>
+		<!--Load the css code-->
+		<link href="../../css/styles.css" rel="stylesheet">
+		<!--Loading a font from Google Sheets-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto&display=swap" rel="stylesheet"> 
+
+	</head>
+	<body style="margin: 0;">	
+	
+	
+		<div class = "UnderHeader"></div>
+		
+		
+		<div class = "FullSection">
+			<div class = "FullCard" style = "">
+				<p class = "BlockTitle">Cleanup on Aisle 6.67</p>
+				<p class = "BlockTitle">Custom Entity Component Engine</p>
+				<p class = "BlockTitle">2020</p>
+				
+				<img src="../../imgs/cleanup_1.png" alt="Photo of Player and Slimes" style ="">
+				
+				<img src="../../imgs/cleanup_2.gif" alt="Animation of isometric camera spinning" style ="">
+				
+				<p class = "BlockText">Cleanup on Aisle 6.67 is an isometric puzzle game starring a cute little vacuum robot tasked with cleaning up various space stations. Suck and shoot little creatures to open doors and solve tasks as you make outer space a slightly brighter place.</p>
+				
+<p class = "BlockText">For this project I created a particle system to create and update lightweight particles that moved across our screen. This system was leveraged to make the glistening stars that litter our levels backgrounds, as well as the terrain of the level itself. Our levels consisted of a number of cube rooms. These cubes all pulled from the same sprite sheet, but used a different index based on design or rotation. A game object located in the center of the cube created a single particle per block based on data read in from an external text file. This created a cost effective way for massive levels to be generated and updated.</p>
+
+<p class = "BlockText">This project featured a semi-custom engine. Game Object creation, deserialization, required components, and audio pipeline were all custom made, and a school provided library was used for the graphics. We adopted a component centered engine approach for this project. The engine would loop through every game object and update each of its components in a set order. Our games levels were read in from very simple text files to allow for rapid prototyping of puzzles.
+</p>
+			</div>
+		</div>
+		
+		
+		<!--Footer-->
+		<div class = "Footer">
+			<p class = "FooterText" style = "text-align: center;">
+				<a class = "FooterLink" href="../../index.html">Landing</a>
+			</p>
+			<p class = "FooterText" style = "text-align: center;">
+				<a class = "FooterLink" href="puppit.html">PUPPIT</a>
+				<a class = "FooterLink" href="aops.html">Animations</a>
+				<a class = "FooterLink" href="efo.html">EFO</a>
+				<a class = "FooterLink" href="cleanup.html">Cleanup on Aisle 6.67</a>
+				<a class = "FooterLink" href="squarepunch.html">SquarePunch</a>
+			</p>
+			
+		</div>
+		
+		<div class = "Header">
+				<h1 class = "PageHeader">Scott Fado-Bristow</h1>
+		</div>
+		
+		<div class = "Header">
+				<h1 class = "PageHeader">Scott Fado-Bristow</h1>
+		</div>
+	
+	
+	<!--Scripts are loaded down here to allow them to override data-->
+	<!--Load the javascript script-->
+	<script src="javascript/main.js"></script>
+	
+	</body>
+</html>
