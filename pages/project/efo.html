@@ -21,21 +21,29 @@
 			<div class = "FullCard" style = "">
 				<p class = "BlockTitle">EFO: Escape from Outworld</p>
 				<img src="../../imgs/efo_1.jpg" alt="Tutorial" style ="">
-				
+				<!--
 				<img src="../../imgs/efo_2.jpg" alt="Main Menu" style ="">
+				-->
 				
+				<a href="../../imgs/efo_code_1.png">
+					<img src="../../imgs/efo_code_1.png" alt="EFO Code Snippit" style ="">
+				</a>
+				
+				<p class = "BlockTitle">Technical Director</p>
 				<p class = "BlockTitle">Custome E.C.S. Engine</p>
 				<p class = "BlockTitle">2020 - 2021</p>
 				
 				
 				
-				<p class = "BlockText">EFO is a side scrolling platformer, wherein you control an alien who has crash landed, and must reach the top of the mountain to call for a ride home before the battery on your distress beacon runs out.</p>
+				<p class = "BlockText">EFO is a side scrolling platformer, wherein you control an alien who has crash landed, and must reach the top of the mountain to call for a ride home before the battery on the distress beacon runs out.
+</p>
 				
-<p class = "BlockText">This project featured a custom engine built fully "from scratch": we did utilize libraries like FMOD and OpenGL. 3 artists, 2 designers, and 5 programmers helped bring this game to life. Due to our rather small team size, everyone helped with any available task, but my main focuses were deserialization and event management. </p>
+				
+<p class = "BlockText">This project featured a custom engine built fully "from scratch" -  we did utilize libraries like FMOD and OpenGL. A team of 3 artists, 2 designers, and 5 programmers helped bring this game to life. Due to our rather small team size, everyone helped with any available task, but my main focuses were deserialization and event management. </p>
 
 <p class = "BlockText">To enable our designers to make the best game they could, our project used a semi-hybrid editor. Levels were created in Tiled, an external application that exported level and tile set data in the JSON format. For the creation of more dynamic objects, such as the player, checkpoints, props, and pickups, a custom-built editor was utilized. The RapidJSON library was used to load the levels created in Tiled, as well as save and then load any dynamic object created in the custom editor. The factory method was used to keep the loading of levels and objects as independent as possible. </p>
 
-<p class = "BlockText">Our event system took inspiration from Unreal. Objects could subscribe to a certain event enumeration by passing the reference of a member function to a central or object exclusive event bus. This event bus would then call the registered functions when an event was published. The existence of one central event bus enabled faster development by reducing the number of bugs caused by objects referencing non existent components. Our collision system could simply publish a collision event on the object exclusive event bus and our particle system would immediately know to start emitting particles. </p>
+<p class = "BlockText">Our event system took inspiration from Unreal. Objects could subscribe to a certain event enumeration by passing the reference of a member function to a central or object exclusive event bus. This event bus would then call the registered functions when an event was published. The existence of one central event bus enabled faster development by reducing the number of bugs caused by objects referencing non existent components. Our collision system could simply publish a collision event on the object exclusive event bus and our particle system would immediately know to start emitting particles.</p>
 
 			</div>
 		</div>

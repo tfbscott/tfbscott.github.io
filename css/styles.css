@@ -39,7 +39,7 @@ html
 	background: var(--primary-container-color);
 }
 /*ON PRIMARY CONTAIER*/
-.BlockText, .BlockTitle
+.BlockText, .BlockTitle,  .BlockFooter
 {
 	font-family: 'Roboto';
 	font-style: normal;
@@ -105,7 +105,7 @@ img, #Img_Me
 	float:right;
 	
 	
-	margin: 10px 30px;
+	margin: 10px 5px 10px 30px;
 	
 	display: inline-block;
 	
@@ -134,10 +134,8 @@ img
 .Section, .FullSection
 {	
 	width: 100%;
-}
-
-.FullSection
-{
+	
+	
 }
 
 .FullCard
@@ -150,6 +148,7 @@ img
 	
 	min-height: 68vh;
 	
+	overflow: auto;
 }
 
 .Card
@@ -160,7 +159,7 @@ img
 	
 	border-radius: var(--border-radius);
 	
-	padding: 20px 20px 20px 20px;
+	padding: 5px 20px;
 	margin: 18px 20px;
 	
 	
@@ -180,6 +179,13 @@ a.Card:hover
 }
 
 
+.CardSpacer
+{
+	min-height: 76%;
+	
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
 
 
 .PageHeader
@@ -255,6 +261,14 @@ a.Card:hover
 }
 
 
+.BlockFooter
+{	
+	font-size: 22px;
+	line-height: 28px;
+	
+	text-align:center;
+}
+
 .FooterText, .FooterLink
 {
 	font-size: 16px;
@@ -307,3 +321,5 @@ a.Card:hover
 	
 	color: var(--on-primary-color);
 }
+
+
