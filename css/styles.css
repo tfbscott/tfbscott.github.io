@@ -159,7 +159,7 @@ img
 	
 	border-radius: var(--border-radius);
 	
-	padding: 5px 20px;
+	padding: 10px 20px;
 	margin: 18px 20px;
 	
 	
@@ -232,7 +232,7 @@ a.Card:hover
 	flex-wrap: nowrap;
 	
 	overflow-y: visible;
-	overflow-x:auto;
+	overflow-x: auto;
 }
 
 
@@ -242,7 +242,7 @@ a.Card:hover
 /* material-theme/title/large */
 
 	font-size: 22px;
-	line-height: 28px;
+	line-height: 26px;
 /* or 127% */
 
 }
@@ -260,11 +260,20 @@ a.Card:hover
 	
 }
 
+/*Used to create a changeable tab size*/
+.TAB
+{
+	display: inline-block;
+	margin-left: 30px;
+}
+
 
 .BlockFooter
 {	
 	font-size: 22px;
 	line-height: 28px;
+	
+	margin: 10px, 0px;
 	
 	text-align:center;
 }
