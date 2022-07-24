@@ -18,6 +18,7 @@ Scott Fado-Bristow
 		<!-- User doesn't see stuff in head -->
 		<meta charset="utf-8">
 		<title>Scott Fado-Bristow's Portfolio Website</title>
+		<base href="./" target="_blank">
 		<!--Load the css code-->
 		<link href="css/styles.css" rel="stylesheet">
 		<!--Loading a font from Google Sheets-->
@@ -33,7 +34,7 @@ Scott Fado-Bristow
 		<!--About Me-->
 		<div class = "Section">
 			<div class = "FullCard" style = "min-height: 44vh;">
-				<img id = "Img_Me" src="imgs/Me_Forward.jpg" alt="Photo of Me">
+				<img class = "FrontImage" src="imgs/Me_Forward.jpg" alt="Photo of Me">
 				<p class = "BlockTitle">About Me</p>
 				
 				<p class = "BlockText">
@@ -70,7 +71,7 @@ Scott Fado-Bristow
 			<div class = "SectionBackground">
 				<a class = "Card"href="pages/project/puppit.html">
 					<div class = "CardSpacer">
-					<img src="imgs/card_puppit.png" alt="cardPUPPIT" style ="width:80px; border-radius: 30px">
+					<img src="imgs/card_puppit.png" alt="cardPUPPIT" class = "CardImage">
 					<p class = "BlockTitle">P.U.P.P.I.T.: 2021 - CURRENT</p>
 					<p class = "BlockText">First Person Shooter where you control a puppet protecting a child from nightmares created in Unreal Engine 4</p>
 					<!--<a class = "BlockText"href="pages/project/puppit.html">Read More</a>-->
@@ -80,7 +81,7 @@ Scott Fado-Bristow
 				</a>
 				<a class = "Card"href="pages/project/aops.html">
 					<div class = "CardSpacer">
-						<img src="imgs/card_aops.png" alt="cardAnim" style ="width:80px; border-radius: 30px">
+						<img src="imgs/card_aops.png" alt="cardAnim" class = "CardImage">
 						<p class = "BlockTitle">Animations over Procedural Skeletons:    2021</p>
 						<p class = "BlockText">A research endevor into recreating Spore's animation system using Unity's object hierarchy</p>
 					</div>
@@ -90,7 +91,7 @@ Scott Fado-Bristow
 				</a>
 				<a class = "Card" href="pages/project/efo.html">
 					<div class = "CardSpacer">
-						<img src="imgs/card_efo.png" alt="cardEFO" style ="width:80px; border-radius: 30px">
+						<img src="imgs/card_efo.png" alt="cardEFO" class = "CardImage">
 						<p class = "BlockTitle">EFO: Escape from Outworld: 2020 - 2021</p>
 						<p class = "BlockText">Side scrolling physics puzzle platformer where an alien attempts to climb a mountain, constructed in an engine built from scratch</p>
 						<p class = "BlockText">
@@ -102,7 +103,7 @@ Scott Fado-Bristow
 				</a>
 				<a class = "Card"href="pages/project/cleanup.html">
 					<div class = "CardSpacer">
-						<img src="imgs/card_cleanup.png" alt="cardCleanup" style ="width:80px; border-radius: 30px">
+						<img src="imgs/card_cleanup.png" alt="cardCleanup" class = "CardImage">
 						<p class = "BlockTitle">Cleanup on Aisle 6.67: 2020</p>
 						<p class = "BlockText">An isometric puzzle game where a cleaning robot sucks up and fire enemies to hit targets and open doors</p>
 					</div>
@@ -111,7 +112,7 @@ Scott Fado-Bristow
 				</a>
 				<a class = "Card"href="pages/project/squarepunch.html">
 					<div class = "CardSpacer">
-						<img src="imgs/card_sp.png" alt="cardSP" style ="width:80px; border-radius: 30px">
+						<img src="imgs/card_sp.png" alt="cardSP" class = "CardImage">
 						<p class = "BlockTitle">SquarePunch: 2019</p>
 						<p class = "BlockText">A simple Metroidvania staring Buff van Fistbro, a cube with muscular arms who has to find pieces of his gym pass to take on his rival</p>
 					</div>
@@ -127,7 +128,7 @@ Scott Fado-Bristow
 			<div class = "SectionBackground">
 				<a class = "Card"href="pages/design/3DLevel.html">
 					<div class = "CardSpacer">
-						<img src="imgs/card_3DL.png" alt="card3DLevel" style ="width:80px; border-radius: 30px">
+						<img src="imgs/card_3DL.png" alt="card3DLevel" class = "CardImage">
 						<p class = "BlockTitle">3D Level Design:    2021</p>
 						<p class = "BlockText">A design project involving designing and test 3D enviroments</p>
 					</div>
@@ -135,7 +136,7 @@ Scott Fado-Bristow
 				</a>
 				<a class = "Card"href="pages/design/2DPCG.html">
 					<div class = "CardSpacer">
-						<img src="imgs/card_2DPCG.png" alt="card2DPCG" style ="width:80px; border-radius: 30px">
+						<img src="imgs/card_2DPCG.png" alt="card2DPCG" class = "CardImage">
 						<p class = "BlockTitle">2D Procedural Level Design:    2021</p>
 						<p class = "BlockText">A design project using constructionist design to create an engaging procedurally generated experience</p>
 					</div>
@@ -143,7 +144,7 @@ Scott Fado-Bristow
 				</a>
 				<a class = "Card"href="pages/design/Crafting.html">
 					<div class = "CardSpacer">
-						<img src="imgs/card_Crafting.png" alt="cardCrafting" style ="width:80px; border-radius: 30px">
+						<img src="imgs/card_Crafting.png" alt="cardCrafting" class = "CardImage">
 						<p class = "BlockTitle">Balancing of Digital Economies:    2021</p>
 						<p class = "BlockText">Balacing item purchasing, crafting, and stats for a theoretical digital economy</p>
 					</div>
@@ -207,37 +208,7 @@ Scott Fado-Bristow
 			</div>
 		</div>
 		
-		
-			
-		
-		<!--Footer-->
-		<div class = "Footer">
-			<p class = "FooterText" style = "text-align: center;">
-				<a class = "FooterLink" href="index.html">Landing</a>
-			</p>
-			<p class = "FooterText" style = "text-align: center;">
-				<a class = "FooterLink" href="pages/project/puppit.html">PUPPIT</a>
-				<a class = "FooterLink" href="pages/project/aops.html">Animations</a>
-				<a class = "FooterLink" href="pages/project/efo.html">EFO</a>
-				<a class = "FooterLink" href="pages/project/cleanup.html">Cleanup on Aisle 6.67</a>
-				<a class = "FooterLink" href="pages/project/squarepunch.html">SquarePunch</a>
-			</p>
-			<p class = "FooterText" style = "text-align: center;">
-				<a class = "FooterLink" href="pages/design/3DLevel.html">3D Level</a>
-				<a class = "FooterLink" href="pages/design/2DPCG.html">2D PCG</a>
-				<a class = "FooterLink" href="pages/design/Crafting.html">Economy</a>
-			</p>
-			
-		</div>
-			
-		
-		<div class = "Header">
-			<h1 class = "PageHeader">Scott Fado-Bristow</h1>
-			<a class = "ContactButton" href = "mailto:tfbscott@gmail.com">Contact</a>
-		</div>
-		
-		
-		
+		<!--Footer and Header are loaded via Javascript-->
 		<!--Scripts are loaded down here to allow them to override data-->
 		<!--Load the javascript script-->
 		<script src="javascript/main.js"></script>

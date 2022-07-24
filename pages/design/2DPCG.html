@@ -3,8 +3,10 @@
 		<!-- User doesn't see stuff in head -->
 		<meta charset="utf-8">
 		<title>Scott's Portfolio Website</title>
+		<!--Set the base directory to make links "global"-->
+		<base href="../../" target="_blank">
 		<!--Load the css code-->
-		<link href="../../css/styles.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
 		<!--Loading a font from Google Sheets-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,66 +17,38 @@
 	
 	
 		<div class = "UnderHeader"></div>
-		
-		
-		<div class = "FullSection">
-			<div class = "FullCard">
-				
-				<p class = "BlockTitle">2D Procedural Level Design</p>
-				
-				<!--
-				IMAGES GO HERE-->
-				<img src="../../imgs/2DPCG_1.png" alt="Example of level chunking" style="height: 16vw; width: 16vw;">
-				
-				<img src="../../imgs/2dPCG_2.png" alt="Boss Room" style="height: 16vw; width: 16vw;">
-				
-				
-				<p class = "BlockTitle">Unity</p>
-				<p class = "BlockTitle">2021</p>
-				
-				<a class = "BlockTitle" href = "https://snakeytiger.itch.io/2d-procedural-level-design">Play for yourself here!</a>
 			
-				
-				<p class = "BlockText"><span class = "TAB"></span>To strengthen my knowledge of level design strategies, I created a procedural dungeon generator inside of Unity. On each launch a C# script runs through multiple systems to create a brand new dungeon for the player to play through. This level also dynamically places enemies and powerups to create an engaging experience.
-				</p>
-				
-				
-				
-				<p class = "BlockText"><span class = "TAB"></span>The procedural system in this project follows a semi-constructionist structure. Each of the possible rooms in the dungeon are created as a Unity prefab during development. When the procedural system runs, it pulls from a map of these rooms with the rooms’ sizes as the key. The map is created in chunks, each representing a different stage of the level. The first chunk covered both the setup and hook phases of the game. There is always a starting room and a mini-boss room in this stage, and the rooms and enemies available in this chunk are designed to introduce the player to the game. The next 2-3 chunks are the development phases. The rooms in these chunks can be up to twice as large as the setup rooms. Each development chunk introduces a new enemy, and the enemy stats are increased to give the player a consistent challenge. The level ends with a turn and resolution chunk. This chunk includes a final boss battle with one of three different bosses. After the boss is defeated, a small trail of setup rooms are placed to ease the player towards the end of the level. 
-				</p>
+		<div class = "FullSection">
+			<p class = "SectionHeader">
+			2D Procedural Level Design
+			<br>
+			Unity | 2021
+			<br>
+			<a style = "color: var(--on-primary-color);"href = "https://snakeytiger.itch.io/2d-procedural-level-design">Play for yourself here!</a>
+			</p>
+			<div class = "grid-container">
+				<div class = "WideCard"> 
+					<p class = "BlockText">
+					To strengthen my knowledge of level design strategies, I created a procedural dungeon generator inside of Unity. On each launch a C# script runs through multiple systems to create a brand new dungeon for the player to play through. This level also dynamically places enemies and powerups to create an engaging experience. 
 
+					</p>
+				</div>
+				<div  style="text-align: center;">	
+					<img src="imgs/2DPCG_1.png" alt="Level Example" class = "TableImage">
+				</div>
+			</div>
+			<div class = "grid-container">
+				<div  style="text-align: center;">
+				<img src="imgs/2DPCG_2.png" alt="Boss Room" class = "TableImage">
+				</div>
+				<div class = "WideCard">
+					<p class = "BlockText">
+					The procedural system in this project follows a semi-constructionist structure. Each of the possible rooms in the dungeon are created as a Unity prefab during development. When the procedural system runs, it pulls from a map of these rooms with the rooms’ sizes as the key. The map is created in chunks, each representing a different stage of the level. The first chunk covered both the setup and hook phases of the game. There is always a starting room and a mini-boss room in this stage, and the rooms and enemies available in this chunk are designed to introduce the player to the game. The next 2-3 chunks are the development phases. The rooms in these chunks can be up to twice as large as the setup rooms. Each development chunk introduces a new enemy, and the enemy stats are increased to give the player a consistent challenge. The level ends with a turn and resolution chunk. This chunk includes a final boss battle with one of three different bosses. After the boss is defeated, a small trail of setup rooms are placed to ease the player towards the end of the level. 
+					</p>
+				</div>
 			</div>
 		</div>
-		
-		
-		<!--Footer-->
-		<div class = "Footer">
-			<p class = "FooterText" style = "text-align: center;">
-				<a class = "FooterLink" href="../../index.html">Landing</a>
-			</p>
-			<p class = "FooterText" style = "text-align: center;">
-				<a class = "FooterLink" href="../project/puppit.html">PUPPIT</a>
-				<a class = "FooterLink" href="../project/aops.html">Animations</a>
-				<a class = "FooterLink" href="../project/efo.html">EFO</a>
-				<a class = "FooterLink" href="../project/cleanup.html">Cleanup on Aisle 6.67</a>
-				<a class = "FooterLink" href="../project/squarepunch.html">SquarePunch</a>
-			</p>
-			<p class = "FooterText" style = "text-align: center;">
-				<a class = "FooterLink" href="3DLevel.html">3D Level</a>
-				<a class = "FooterLink" href="2DPCG.html">2D PCG</a>
-				<a class = "FooterLink" href="Crafting.html">Economy</a>
-			</p>
-			
-		</div>
-		
-		<div class = "Header">
-				<h1 class = "PageHeader">Scott Fado-Bristow</h1>
-		</div>
-		
-		<div class = "Header">
-				<h1 class = "PageHeader">Scott Fado-Bristow</h1>
-		</div>
-	
+				
 	
 	<!--Scripts are loaded down here to allow them to override data-->
 	<!--Load the javascript script-->

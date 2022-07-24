@@ -3,8 +3,10 @@
 		<!-- User doesn't see stuff in head -->
 		<meta charset="utf-8">
 		<title>Scott's Portfolio Website</title>
+		<!--Set the base directory to make links "global"-->
+		<base href="../../" target="_blank">
 		<!--Load the css code-->
-		<link href="../../css/styles.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
 		<!--Loading a font from Google Sheets-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,64 +17,36 @@
 	
 	
 		<div class = "UnderHeader"></div>
-		
-		
 		<div class = "FullSection">
-			<div class = "FullCard">
-				
-				<p class = "BlockTitle">Animations over Procedural Skeletons</p>
-				
-				<img src="../../imgs/aops_1.gif" alt="Animation of Animations">
-				
-				<img src="../../imgs/aops_2.gif" alt="Animation of Animations">
-			
-				
-				<p class = "BlockTitle">Unity</p>
-				<p class = "BlockTitle">2021</p>
-				
-				
-			
-				
-				<p class = "BlockText"><span class = "TAB"></span>This research project utilized Unity to create a system that would allow animations to be played on a skeleton that is unknown during production. This was accomplished by creating a system for identifying certain parts of the skeleton that would be needed to perform certain actions. A list of animations were then created with the parts required flagged. An animation system would then search down a binary tree for the best animation that fits the parts on the current system and assign movements and rotations to individual "bones" based on the selected animation.
-</p>
-				
-<p class = "BlockText"><span class = "TAB"></span>For this project, a custom skeleton system was created leveraging Unity's object hierarchy system. Individual objects were treated as bones allowing a higher level animation system to assign movements and rotations to an animation script attached to the object.</p>
+			<p class = "SectionHeader">
+			Animation Over Procedurally Generated Skeletons
+			<br>
+			Unity | 2021
+			</p>
+			<div class = "grid-container">
+				<div class = "WideCard"> 
+					<p class = "BlockText">
+					This research project utilized Unity to create a system that would allow animations to be played on a skeleton that is unknown during production. This was accomplished by creating a system for identifying certain parts of the skeleton that would be needed to perform certain actions. A list of animations were then created flagging the parts required. An animation system would then search down a binary tree for the best animation that fits the parts on the current system and assign movements and rotations to individual "bones" based on the selected animation.
 
-<p class = "BlockText"><span class = "TAB"></span>This is a project I would love to revisit and improve upon sometime in the future. Our method of animating the individual bones could be drastically improved, and creating a method for de-serializing animations from an outside source would be the icing on the cake.
-</p>
-
+					</p>
+				</div>	
+				<div  style="text-align: center;">
+					<img src="imgs/aops_1.gif" alt="Animation Example" class = "TableImage">
+				</div>
+			</div>
+			<div class = "grid-container">
+				<div  style="text-align: center;">
+					<img src="imgs/aops_2.gif" alt="Animation Example" class = "TableImage">
+				</div>
+				<div class = "WideCard">
+					<p class = "BlockText">
+					For this project, a custom skeleton system was created leveraging Unity's object hierarchy system. Individual objects were treated as bones allowing a higher level animation system to assign movements and rotations to an animation script attached to the object. 
+					<br>
+					This is a project I would love to revisit and improve upon sometime in the future. Our method of animating the individual bones could be drastically improved, and creating a method for de-serializing animations from an outside source would be the icing on the cake.
+					</p>
+				</div>
 			</div>
 		</div>
-		
-		
-		<!--Footer-->
-		<div class = "Footer">
-			<p class = "FooterText" style = "text-align: center;">
-				<a class = "FooterLink" href="../../index.html">Landing</a>
-			</p>
-			<p class = "FooterText" style = "text-align: center;">
-				<a class = "FooterLink" href="puppit.html">PUPPIT</a>
-				<a class = "FooterLink" href="aops.html">Animations</a>
-				<a class = "FooterLink" href="efo.html">EFO</a>
-				<a class = "FooterLink" href="cleanup.html">Cleanup on Aisle 6.67</a>
-				<a class = "FooterLink" href="squarepunch.html">SquarePunch</a>
-			</p>
-			<p class = "FooterText" style = "text-align: center;">
-				<a class = "FooterLink" href="../design/3DLevel.html">3D Level</a>
-				<a class = "FooterLink" href="../design/2DPCG.html">2D PCG</a>
-				<a class = "FooterLink" href="../design/Crafting.html">Economy</a>
-			</p>
-			
-		</div>
-		
-		<div class = "Header">
-				<h1 class = "PageHeader">Scott Fado-Bristow</h1>
-		</div>
-		
-		<div class = "Header">
-				<h1 class = "PageHeader">Scott Fado-Bristow</h1>
-		</div>
-	
 	
 	<!--Scripts are loaded down here to allow them to override data-->
 	<!--Load the javascript script-->
