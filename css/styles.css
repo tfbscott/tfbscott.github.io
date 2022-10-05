@@ -30,12 +30,12 @@ html
 }
 
 /*PUT ANYTHING YOU WANT TO BE PRIMARY COLOR HERE*/
-.Header, .SectionHeader, .Footer
+.Header, .SectionHeader, .Footer, .SectionHeaderLeft
 {
 	background: var(--primary-color);
 }
 /*ON PRIMARY*/
-.PageHeader, .SectionHeader, .FooterText, .FooterLink
+.PageHeader, .SectionHeader, .FooterText, .FooterLink, .SectionHeaderLeft
 {
 	color: var(--on-primary-color);
 }
@@ -281,7 +281,7 @@ a.Card:hover
 	padding: 0px 20px;
 }
 
-.SectionHeader
+.SectionHeader, .SectionHeaderLeft
 {
 	/* material-theme/headline/large */
 
@@ -296,8 +296,16 @@ a.Card:hover
 	margin: 0px 0px;
 	
 	/* material-theme/sys/light/on-surface */
-	
+}
+
+.SectionHeader
+{
 	border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+}
+
+.SectionHeaderLeft
+{
+	border-radius: var(--border-radius) 0px 0px var(--border-radius);
 }
 
 .SectionBackground
