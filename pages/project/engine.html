@@ -25,19 +25,19 @@
 			C++ | 2022
 			</p>
 			<div class = "grid-container">
-				<div class = "WideCard"> 
+				<div class = "Block"> 
+				
 					<p class = "BlockText">
-						Over the summer of 2022, I created an Engine Component System Engine using the skills I have aquired across my 3 years at Digipen. This project was my first real experience with OpenGL and creating multiple DLLs for a project. 
+						Over the 2022 summer, I created a custom Entity Component System game engine to expand and improve the skills I learned over 3 years of Digipen.  
 						<br>
-						The engine features:
-						<ul>
-						<li class = "BlockText">A core system that handles the creation of Game Objects and updating of Systems</li>
-						<li class = "BlockText">A 3D renderer utilizing OpenGL and GLFW that supports splitscreen</li>
-						<li class = "BlockText">An Input Manager that supports multiple input devices</li>
-						<li class = "BlockText">A simple Kinematics System that updates object positions and resolves AABB collision</li>
-						<li class = "BlockText">A simple behavior system that is used to control objects on screen</li>
+						The highlights of this project are:
+						<ul class = "BlockText">
+						<li>An Input Management system that allows for custom action creation and supports multiple input devices</li>
+						<li>A 3D renderer utilizing OpenGL and GLFW that supports splitscreen</li>
+						<li >Major systems and components are split between multiple projects to improve compile time and organization.</li>
 						</ul>
 					</p>
+				
 				</div>
 					
 				<div  style="text-align: center;">
@@ -45,90 +45,55 @@
 				</div>
 			</div>
 			<p class = "SectionHeaderLeft">
-			Core
+			Input System
 			</p>
 			<div class = "grid-container">
 				<div  style="text-align: center;">
-					<!--<img src="" alt="Image" class = "TableImage">-->
+					<img src="imgs/engine_3.png" alt="Image" class = "TableImage">
 				</div>
-				<div class = "WideCard">
+				<div class = "Block">
 					<p class = "BlockText">
-						The Engine Core handles the creation of GameObjects, Components, and Systems. It is designed to be as multi-platform as possible. Each component and system would derive from template classes defined in Core.h, and can then be added to the list of system the Core's Update function runs through each frame. 
-						<br>
-						User Input is partually managed by the Engine Core. The system for registering key presses to actions and broadcasting action events exists, but translating data from actual input devives is not set up. This is left to other libraries (In this case, GLFW).
-						<br>
-						By default, a systems update loop is parallel. This improves performance by updating multiple components at the same time on multiple threads. This feature is NOT used often due to bugs with components accessing outside data.
+						During development, my EFO-inspired input system hit a major roadblock when attempting to process input from multiple systems. After doing research, I came up with the plan to gut my existing system and replace it with a new system built to support multiple controllers from the beginning. 
+						<br><br>
+						The system draws inspiration from Unreal Engine’s and Unity’s Axis and Action systems. Key presses on a controller, mouse, or keyboard can be assigned to an action, represented by a string. Function pointers can be subscribed to actions, and will be called when a key assigned to the action is pressed. This also works for member functions, allowing for components like behaviors to use this system. 
 					</p>
+				</div>
+			</div>
+			<div class = "grid-container">
+				<div class = "Block">
+					<p class = "BlockText">
+						The system polls for input using a custom class called Input Device. These are stored in the Input manager and checked each frame for a change in currently pressed input. The separation of these from the Input Manager allows for Input Devices to control how they receive their input, allowing for easier cross-platform development in the future. 
+					</p>
+				</div>
+				<div  style="text-align: center;">
+					<img src="imgs/engine_code_1.png" alt="Image" class = "TableImage">
 				</div>
 			</div>
 			<p class = "SectionHeader">
 			Renderer
 			</p>
 			<div class = "grid-container">
-				<div class = "WideCard">
+				<div class = "Block">
 					<p class = "BlockText">
-						The renderer uses GLFW to draw objects on screen. Shape and Texture classes hold information for verticies and color data and can be shared between Renderer Components. Each frame, the Render System grabs all active cameras, and creates a viewport based off of the width, height, x, and y set by the Camera component. Each Renderer Component is then drawn onto each viewport.
+						To allow for split-screen gameplay, the generic GLFW camera class was expanded upon. Values for controlling where on the screen the player's camera would be drawn and the display width and height relative to the current window size were added. Each active camera uses glViewport to target a specific area of the screen and calls the render loop to draw objects to the screen. While primarily used for 4 players, this system can support 16 cameras at the same time.
 					</p>
 				</div>
 					
 				<div  style="text-align: center;">
-					<!--<img src="" alt="Image" class = "TableImage">-->
+					<img src="imgs/engine_4.png" alt="Image" class = "TableImage">
 				</div>
 			</div>
 			<p class = "SectionHeaderLeft">
-			Kinematics
+			Project Layout
 			</p>
 			<div class = "grid-container">
 				<div  style="text-align: center;">
-					<!--<img src="" alt="Image" class = "TableImage">-->
+					<img src="imgs/engine_6.png" alt="Image" class = "TableImage">
 				</div>
-				<div class = "WideCard">
+				<div class = "Block">
 					<p class = "BlockText">
-						To allow simple object movement, a barebones kinematics system was created. The Kinematics Component accuratly updates an objects Transformation using velocity and acceleration. 
-						<br>
-						An Axis Aligned Bounding Box collision system was also created. This system allows for collision between multiple bounding boxes, as well as the ability to send a raycast out into the enviroment and return the firstmost collision.
-						<br>
-						The Kinematics System is currently the only system that updates components on multiple threads. There are plans to update the collision system to do this as well, but that is a larger undertaking.
+						For learning purposes, I divided this project into multiple dynamically linked libraries. While this did help keep the project organized and slightly lowered compile times, this project doesn’t use efficiently use dll’s. It helped open my eyes to exactly how and why dll’s are used. It led me on a research journey that improved my understanding of library creation and taught lessons I will take on my next project.
 					</p>
-				</div>
-			</div>
-			<p class = "SectionHeader">
-			Behavior
-			</p>
-			<div class = "grid-container">
-				<div class = "WideCard">
-					<p class = "BlockText">
-						The behavior system is simply a way for a user (mostly me) to create per object behaviors. The Base Behavior Component provides OnStart, OnUpdate, and OnDelete functions for child classes to override. Functions to subscribe Action Events are also provided to ease the process. 
-						<br>
-						An On Collision Event function is provided as well, and is pre-subscribed to a Collision Event that is provided in the Engine Core. Theoretically, any Collision system provided will throw a Collision Event when colliding, and this function will be called.
-					</p>
-				</div>
-					
-				<div  style="text-align: center;">
-					<!--<img src="" alt="Image" class = "TableImage">-->
-				</div>
-			</div>
-			<p class = "SectionHeaderLeft">
-			Future
-			</p>
-			<div class = "grid-container">
-				<div class = "WideCard">
-					<p class = "BlockText">
-						This project was an amazing learning experience for me, and I plan to continue updating the systems as I learn more. Certain ideas for this engine were scrapped due to complexity or requiring major refactoring. 
-						<br>
-						Future Steps for the Engine
-						<ul>
-						<li class = "BlockText">Better Documentation</li>
-						<li class = "BlockText">Renderer Refactor/Streamline</li>
-						<li class = "BlockText">Multithreading Support via Decomponsition</li>
-						<li class = "BlockText">C# or Python Scripting</li>
-						<li class = "BlockText">Raycasting improvements via Quadtree</li>
-						</ul>
-					</p>
-				</div>
-					
-				<div  style="text-align: center;">
-					<!--<img src="" alt="Image" class = "TableImage">-->
 				</div>
 			</div>
 		</div>

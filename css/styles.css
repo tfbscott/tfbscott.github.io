@@ -20,14 +20,9 @@ html
 	background:  var(--background-color);
 }
 
-/*Experiments with CSS Grid*/
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25em, auto));
-  padding: 10px 20px 10px 20px;
-  
-  column-gap: 1em;
-}
+/**********************************************************************
+		COLORS
+**********************************************************************/
 
 /*PUT ANYTHING YOU WANT TO BE PRIMARY COLOR HERE*/
 .Header, .SectionHeader, .Footer, .SectionHeaderLeft
@@ -35,29 +30,65 @@ html
 	background: var(--primary-color);
 }
 /*ON PRIMARY*/
-.PageHeader, .SectionHeader, .FooterText, .FooterLink, .SectionHeaderLeft
+.PageHeader, .SectionHeader, .FooterText, .FooterLink, .SectionHeaderLeft, .ContactButton
 {
 	color: var(--on-primary-color);
 }
 /*PRIMARY CONTAINER*/
-.Card, .FullCard, .FullScreenCard, .WideCard
+.Card, .FullCard, .FullScreenCard, .Block
 {
 	background: var(--primary-container-color);
 }
 /*ON PRIMARY CONTAIER*/
-.BlockText, .BlockTitle,  .BlockFooter
+.BlockText, .BlockTitle, .CardText, .CardFooter
+{
+	color: var(--on-primary-container-color);
+}
+
+/**********************************************************************
+		TEXT SIZES AND FONT
+**********************************************************************/
+
+/*Set Global Font Data*/
+.BlockText, .BlockTitle, .CardText .CardFooter, .PageHeader, .SectionHeader, .SectionHeaderLeft, .ContactButton
 {
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 400;
-	color: var(--on-primary-container-color);
-}
-/*tertiary Color*/
-.SectionBackground, .UnderHeader
-{
-	/*background: var(--tertiary-color);*/
 }
 
+.BlockTitle, .CardFooter
+{
+	font-size: 24px;
+	line-height: 26px;
+}
+
+.BlockText, .FooterText, .FooterLink, .CardText
+{
+	font-size: 22px;
+	line-height: 26px;
+}
+
+p.BlockText
+{
+	margin: 36px;
+}
+
+.PageHeader
+{
+	font-size: 57px;
+	line-height: 64px;
+}
+
+.SectionHeader, .SectionHeaderLeft
+{
+	font-size: 32px;
+	line-height: 40px;
+}
+
+/**********************************************************************
+		HEADER
+**********************************************************************/
 
 /*Set the headers height*/
 .Header, .UnderHeader
@@ -66,33 +97,19 @@ html
 	height: 120px;
 }
 
-
-/*
-p is the html element we want to modify (paragraph
-color is the property
-red is the value
-*/
-/*
-You can select specific IDs
-using #
-#myid will get <p id="myid">
-You can create classes using .
-.myclass would create as class
-*/
-
-.Header
+.Header, .HeaderFrame
 {
-	
 	position: fixed;
 
 	left: 0px;
 	top: 0px;
 	
 	padding: 0px 0px;
-	
+}
+
+.Header
+{
 	border-radius: 0px 0px var(--border-radius) 0px;
-	
-	/*border-radius: 60px;*/
 }
 
 /*
@@ -102,29 +119,37 @@ Now for the Header Iframe
 {
 	display: block;
 	
-	position: fixed;
-
-	left: 0px;
-	top: 0px;
-	
-	padding: 0px 0px;
 	margin: 0px 0px;
 	
 	width:100%;
 	
 	border:none;
-	
 }
 
+.PageHeader
+{
+	align-items: center;
+	letter-spacing: -0.25px;
+	
+	padding: 0px 20px;
+}
+
+/**********************************************************************
+		FOOTER
+**********************************************************************/
+
+.Footer, .FooterFrame
+{
+	position: relative;
+		
+	bottom: 0px;
+}
 
 .Footer
 {
-	position: relative;
 	padding: 20px 40px 20px 40px;
 	
 	margin: 20px 0px 0px 0px;
-	
-	bottom: 0px;
 	
 	border-radius: 0px var(--border-radius) 0px 0px;
 }
@@ -135,12 +160,9 @@ Now for the Header Iframe
 	
 	display: block;
 	
-	position: relative;
 	padding: 0px;
 	
 	margin: 0px;
-	
-	bottom: 0px;
 	
 	width: 100%;
 	
@@ -148,6 +170,48 @@ Now for the Header Iframe
 	
 	border:none;
 }
+
+/**********************************************************************
+		Sections
+**********************************************************************/
+
+.Section, .FullSection
+{	
+	width: 100%;
+}
+
+.SectionBackground
+{
+	width: 100%;
+	
+	display: flex;
+	flex-wrap: nowrap;
+	
+	/*Gives the slider for overflow on the section*/
+	overflow-y: visible;
+	overflow-x: auto;
+}
+
+.SectionHeader, .SectionHeaderLeft
+{
+	padding: 20px 40px;
+	margin: 0px 0px;
+}
+
+.SectionHeader
+{
+	border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+}
+
+.SectionHeaderLeft
+{
+	border-radius: var(--border-radius) 0px 0px var(--border-radius);
+}
+
+
+/**********************************************************************
+		Images
+**********************************************************************/
 
 .CardImage, .FrontImage
 {
@@ -164,17 +228,10 @@ Now for the Header Iframe
 .TableImage
 {
 	
+	
 	max-width:100%;
 	max-height:100%;
 	
-	/*
-	object-fit: contain;
-	display: block;
-	margin-left: auto;
-	margin-right:auto;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	*/
 	padding: 0px 0px 0px 0px;
 	
 	margin: 0px 0px 0px 0px;
@@ -202,16 +259,17 @@ Now for the Header Iframe
 }
 
 
-.Section, .FullSection
-{	
-	width: 100%;
+/**********************************************************************
+		Cards
+**********************************************************************/
+
+.FullCard, .Block, .Card
+{
+	border-radius: var(--border-radius);
 }
 
 .FullCard
 {
-	
-	border-radius: var(--border-radius);
-	
 	padding: 20px 20px 20px 20px;
 	margin: 18px 20px;
 	
@@ -221,19 +279,9 @@ Now for the Header Iframe
 }
 
 
-.WideCard, .Card
+.Block, .Card
 {
 	flex: 0 0 auto;
-	
-	border-radius: var(--border-radius);
-	
-}
-
-.WideCard
-{
-	height: 100%;
-	padding: 0px 20px 0px 20px;
-
 }
 
 .Card
@@ -259,123 +307,35 @@ a.Card:hover
 
 .CardSpacer
 {
-	min-height: 76%;
+	min-height: 18em;
 	
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
 }
 
 
-.PageHeader
-{
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 57px;
-	line-height: 64px;
-	/* identical to box height, or 112% */
-	
-	align-items: center;
-	letter-spacing: -0.25px;
-	
-	padding: 0px 20px;
-}
-
-.SectionHeader, .SectionHeaderLeft
-{
-	/* material-theme/headline/large */
-
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 32px;
-	line-height: 40px;
-	/* identical to box height, or 125% */
-	
-	padding: 20px 40px;
-	margin: 0px 0px;
-	
-	/* material-theme/sys/light/on-surface */
-}
-
-.SectionHeader
-{
-	border-radius: 0px var(--border-radius) var(--border-radius) 0px;
-}
-
-.SectionHeaderLeft
-{
-	border-radius: var(--border-radius) 0px 0px var(--border-radius);
-}
-
-.SectionBackground
-{
-	width: 100%;
-	
-
-	
-	display: flex;
-	flex-wrap: nowrap;
-	
-	overflow-y: visible;
-	overflow-x: auto;
-}
-
-
-.BlockTitle
-{
-
-/* material-theme/title/large */
-
-	font-size: 22px;
-	line-height: 26px;
-/* or 127% */
-
-}
-
-.BlockText
-{
-	
-/* material-theme/body/large */
-	
-	font-size: 16px;
-	line-height: 24px;
-	/* or 150% */
-	
-	letter-spacing: 0.5px;
-	
-}
-
-/*Used to create a changeable tab size*/
-.TAB
-{
-	display: inline-block;
-	margin-left: 30px;
-}
-
-
-.BlockFooter
+.CardFooter
 {	
-	font-size: 22px;
-	line-height: 28px;
-	
 	margin: 10px 0px;
 	
 	text-align:center;
 }
 
-.FooterText, .FooterLink
-{
-	font-size: 16px;
-	line-height: 24px;
-	/* or 150% */
-	
-	letter-spacing: 0.5px;
-}
-
 .FooterLink
 {
 	margin: 0px 20px 20px 20px;
+}
+
+
+/**********************************************************************
+		Blocks (Big Card)
+**********************************************************************/
+
+.Block
+{
+	height: 100%;
+	padding: 0px 0px 0px 0px;
+
 }
 
 .Link
@@ -396,33 +356,30 @@ a.Card:hover
 	
 	margin: 30px 20px;
 
-	/* material-theme/sys/light/on-primary */
-
 	border: 3px solid var(--on-primary-color);
 	box-sizing: border-box;
 	border-radius: 10px;
 	
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 400;
 	font-size: 36px;
 	line-height: 44px;
-	/* or 122% */
 	
 	align-items: center;
 	text-align: center;
-	
-	/* material-theme/sys/light/on-primary */
-	
-	color: var(--on-primary-color);
+
 }
 
-.PageTable
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, auto));
+  padding: 10px 20px 10px 20px;
+  
+  column-gap: 1em;
+}
+
+.center
 {
-	padding: 10px 30px 10px 30px;
-	
-	width : 100%;
-	height : 1px;
-	
+	display: flex;
+	justify-content: center;
 	align-items: center;
 }
