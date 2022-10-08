@@ -1,0 +1,106 @@
+<html>
+	<head>  
+		<!-- User doesn't see stuff in head -->
+		<meta charset="utf-8">
+		<title>Scott's Portfolio Website</title>
+		<!--Set the base directory to make links "global"-->
+		<base href="../../" target="_blank">
+		<!--Load the css code-->
+		<link href="css/styles.css" rel="stylesheet">
+		<!--Loading a font from Google Sheets-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto&display=swap" rel="stylesheet"> 
+
+	</head>
+	<body style="margin: 0;">	
+	
+	
+		<div class = "UnderHeader"></div>
+
+		<div class = "FullSection">
+			<p class = "SectionHeader">
+			CUSTOM ENGINE
+			<br>
+			C++ | 2022
+			</p>
+			<div class = "grid-container">
+				<div class = "Block"> 
+				
+					<p class = "BlockText">
+						Over the 2022 summer, I created a custom Entity Component System game engine to expand and improve the skills I learned over 3 years of Digipen.  
+						<br>
+						The highlights of this project are:
+						<ul class = "BlockText">
+						<li>An Input Management system that allows for custom action creation and supports multiple input devices</li>
+						<li>A 3D renderer utilizing OpenGL and GLFW that supports splitscreen</li>
+						<li >Major systems and components are split between multiple projects to improve compile time and organization.</li>
+						</ul>
+					</p>
+				
+				</div>
+					
+				<div  style="text-align: center;">
+					<img src="imgs/engine_1.gif" alt="Image" class = "TableImage">
+				</div>
+			</div>
+			<p class = "SectionHeaderLeft">
+			Input System
+			</p>
+			<div class = "grid-container">
+				<div  style="text-align: center;">
+					<img src="imgs/engine_3.png" alt="Image" class = "TableImage">
+				</div>
+				<div class = "Block">
+					<p class = "BlockText">
+						During development, my EFO-inspired input system hit a major roadblock when attempting to process input from multiple systems. After doing research, I came up with the plan to gut my existing system and replace it with a new system built to support multiple controllers from the beginning. 
+						<br><br>
+						The system draws inspiration from Unreal Engine’s and Unity’s Axis and Action systems. Key presses on a controller, mouse, or keyboard can be assigned to an action, represented by a string. Function pointers can be subscribed to actions, and will be called when a key assigned to the action is pressed. This also works for member functions, allowing for components like behaviors to use this system. 
+					</p>
+				</div>
+			</div>
+			<div class = "grid-container">
+				<div class = "Block">
+					<p class = "BlockText">
+						The system polls for input using a custom class called Input Device. These are stored in the Input manager and checked each frame for a change in currently pressed input. The separation of these from the Input Manager allows for Input Devices to control how they receive their input, allowing for easier cross-platform development in the future. 
+					</p>
+				</div>
+				<div  style="text-align: center;">
+					<img src="imgs/engine_code_1.png" alt="Image" class = "TableImage">
+				</div>
+			</div>
+			<p class = "SectionHeader">
+			Renderer
+			</p>
+			<div class = "grid-container">
+				<div class = "Block">
+					<p class = "BlockText">
+						To allow for split-screen gameplay, the generic GLFW camera class was expanded upon. Values for controlling where on the screen the player's camera would be drawn and the display width and height relative to the current window size were added. Each active camera uses glViewport to target a specific area of the screen and calls the render loop to draw objects to the screen. While primarily used for 4 players, this system can support 16 cameras at the same time.
+					</p>
+				</div>
+					
+				<div  style="text-align: center;">
+					<img src="imgs/engine_4.png" alt="Image" class = "TableImage">
+				</div>
+			</div>
+			<p class = "SectionHeaderLeft">
+			Project Layout
+			</p>
+			<div class = "grid-container">
+				<div  style="text-align: center;">
+					<img src="imgs/engine_6.png" alt="Image" class = "TableImage">
+				</div>
+				<div class = "Block">
+					<p class = "BlockText">
+						For learning purposes, I divided this project into multiple dynamically linked libraries. While this did help keep the project organized and slightly lowered compile times, this project doesn’t use efficiently use dll’s. It helped open my eyes to exactly how and why dll’s are used. It led me on a research journey that improved my understanding of library creation and taught lessons I will take on my next project.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+	<!--Scripts are loaded down here to allow them to override data-->
+	<!--Load the javascript script-->
+	<script src="javascript/main.js"></script>
+	
+	</body>
+</html>
