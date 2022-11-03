@@ -7,7 +7,9 @@ const header = document.createElement('template');
 const footer = document.createElement('template');
 
 header.innerHTML = `<div class = "Header">
+		<a class="HiddenL" href="index.html" target=_self>
 		<h1 class = "PageHeader">Scott Fado-Bristow</h1>
+		</a>
 		<a class = "ContactButton" href = "mailto:tfbscott@gmail.com">Contact</a>
 	</div>`;
 	
