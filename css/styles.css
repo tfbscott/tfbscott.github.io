@@ -35,7 +35,7 @@ html
 	color: var(--on-primary-color);
 }
 /*PRIMARY CONTAINER*/
-.Card, .FullCard, .FullScreenCard, .Block
+.Card, .FullCard, .FullScreenCard, .Block, .BannerCard
 {
 	background: var(--primary-container-color);
 }
@@ -213,16 +213,17 @@ Now for the Header Iframe
 		Images
 **********************************************************************/
 
+.CardImage, .FrontImage, .TableImage, .BannerImageTop, .BannerImageBottom
+{
+	border: 5px solid var(--on-primary-container-color);
+}
 .CardImage, .FrontImage
 {
 	float:right;
 	
-	
 	margin: 10px 5px 10px 30px;
 	
 	display: inline-block;
-	
-	border: 5px solid var(--on-primary-container-color);
 }
 
 .TableImage
@@ -237,8 +238,6 @@ Now for the Header Iframe
 	margin: 0px 0px 0px 0px;
 	
 	border-radius: var(--border-radius);
-	
-	border: 5px solid var(--on-primary-container-color);
 }
 
 .FrontImage
@@ -258,12 +257,28 @@ Now for the Header Iframe
 	clear: right;
 }
 
+.BannerImageTop, .BannerImageBottom
+{
+	width: 100%;
+	/*object-fit: cover;*/
+}
+
+.BannerImageTop
+{
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.BannerImageBottom
+{
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
 
 /**********************************************************************
 		Cards
 **********************************************************************/
 
-.FullCard, .Block, .Card
+.FullCard, .Block, .Card, .BannerCard
 {
 	border-radius: var(--border-radius);
 }
