@@ -21,6 +21,15 @@ html
 }
 
 /**********************************************************************
+		HIDDEN LINK
+**********************************************************************/
+.HiddenL:hover, .HiddenL:visited, .HiddenL:link, .HiddenL:active
+{
+    text-decoration: none;
+}
+
+
+/**********************************************************************
 		COLORS
 **********************************************************************/
 
@@ -66,7 +75,7 @@ html
 .BlockText, .FooterText, .FooterLink, .CardText
 {
 	font-size: 22px;
-	line-height: 26px;
+	line-height: 28px;
 }
 
 p.BlockText
