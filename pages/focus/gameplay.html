@@ -1,0 +1,59 @@
+<html>
+	<head>  
+		<!-- User doesn't see stuff in head -->
+		<meta charset="utf-8">
+		<title>Scott's Portfolio Website</title>
+		<base href="../../" target="_blank">
+		<!--Load the css code-->
+		<link href="css/styles.css" rel="stylesheet">
+		<!--Loading a font from Google Sheets-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto&display=swap" rel="stylesheet"> 
+
+	</head>
+	<body style="margin: 0;">	
+	
+	
+		<div class = "UnderHeader"></div>
+		
+		<div class = "FullSection">
+			<p class = "SectionHeader">
+			Gameplay Programming
+			<br>
+			
+			</p>
+			<!--EFO-->
+			<div class = "grid-container">
+						<div class = "Block"> 
+							<p class = "BlockText">
+							EFO: Escape from Outworld features a mechanic where the player can pick up and move blocks to solve puzzles. Since EFO needed to be up and playable in just 7 weeks, the design team was rapidly prototyping while the core engine was being built. To accommodate this, the act of picking up and moving an object was split into two components, Grabber and Handle. The grabber would always be set on our Mouse object and controlled the speed at which objects moved toward its center and the max number of objects it could grab. The Handle was used as a flag so the Grabber knew what it could grab. This allowed the design team to easily flag an object as grabbable and experiment with object movement speeds and grabbing multiple objects.
+
+							</p>
+						</div>
+					<div  style="text-align: center;">
+						<img src="imgs/efo_3.gif" alt="Example" class = "TableImage">
+					</div>
+			</div>	
+			<!--PUPPIT-->			
+			<div class = "grid-container">
+				<div  style="text-align: center;">
+					<img src="imgs/puppit_4.gif" alt="Example" class = "TableImage">
+				</div>
+				<div class = "Block">
+					<p class = "BlockText">
+					Early in the development of P.U.P.P.I.T. the idea was pitched to allow the player to swap between multiple guns. To accommodate this, guns were created as their own actors and forcefully bound to the player when the level loaded. The gun actors were stored in an array and updated during the Players update loop. An index was used to identify what the currently attached gun was. Each gun featured a state machine with 5 states: Equip, Idle, Fire, Reload, and DeEquip. Entry to certain states would be denied based on the gun's current values, if the gun's ammunition counter was zero, the Fire state would be denied. 
+					</p>
+				</div>
+			</div>
+			
+		</div>	
+		
+		
+	
+	<!--Scripts are loaded down here to allow them to override data-->
+	<!--Load the javascript script-->
+	<script src="javascript/main.js"></script>
+	
+	</body>
+</html>
