@@ -1,0 +1,89 @@
+<html>
+	<head>  
+		<!-- User doesn't see stuff in head -->
+		<meta charset="utf-8">
+		<title>Scott's Portfolio Website</title>
+		<base href="../../" target="_blank">
+		<!--Load the css code-->
+		<link href="css/styles.css" rel="stylesheet">
+		<!--Loading a font from Google Sheets-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto&display=swap" rel="stylesheet"> 
+
+	</head>
+	<body style="margin: 0;">	
+	
+	
+		<div class = "UnderHeader"></div>
+		
+		<!-- 
+			For AI I should show off
+			Early AI in Cleanup
+			AI work from CS380
+			Boss fight from PUPPIT
+			Goblins and plans for Goblins in Descent
+		-->
+		
+		<div class = "FullSection">
+			<p class = "SectionHeader">
+			Artificial Intelligence 
+			<br>
+			Must look smart, must be beatable, must be fun
+			</p>
+			<!--Cleanup-->
+			<div class = "grid-container">
+						<div class = "Block"> 
+							<p class = "BlockText">
+							My first A.I. work was on Cleanup on Aisle 6.67. The enemies were controlled by a simple state machine that randomly rotated between states. 
+							</p>
+						</div>
+					<div  style="text-align: center;">
+						<img src="imgs/cleanup_3.png" alt="Example" class = "TableImage">
+					</div>
+			</div>	
+			<!--CS380-->
+			<div class = "grid-container">
+				<div  style="text-align: center;">
+					<img src="imgs/AI_1.png" alt="Example" class = "TableImage">
+				</div>
+				<div class = "Block">
+					<p class = "BlockText">
+					In my Junior year, I took a class on Artificial Intelligence in video games. This class extensively focused on movement behaviors, pathfinding, and decision-making. For this class's assignments, I programmed Behavior Trees, A* pathfinding, and influence maps in C++.
+
+					</p>
+				</div>
+			</div>
+			<!--PUPPIT-->
+			<div class = "grid-container">
+				<div class = "Block"> 
+					<p class = "BlockText">
+					During the development of P.U.P.P.I.T. I was tasked with creating the AI for the game's final boss. This was my introduction to Unreal’s Behavior Tree system. While the behaviors are simple, they are enough to create an engaging experience for the player.
+					</p>
+				</div>
+				<div  style="text-align: center;">
+					<img src="imgs/puppit_4.gif" alt="Example" class = "TableImage">
+				</div>
+			</div>	
+			<!--Descent-->			
+			<div class = "grid-container">
+				<div  style="text-align: center;">
+					<img src="imgs/descent_code_1.png" alt="Example" class = "TableImage">
+				</div>
+				<div class = "Block">
+					<p class = "BlockText">
+					For the Descent, I decided to try and create an AI that took full advantage of the Unreal Engine behavior tree. I experimented with the Environment Query System to create a movement system that would allow the enemy to jump over terrain if it assumes it would be faster. Services are used to update the enemy's pathing and perception. Blackboard-based conditions are used to abort sections of the tree if major values are changed inside the enemy's blackboard.
+					</p>
+				</div>
+			</div>
+			
+		</div>	
+		
+		
+	
+	<!--Scripts are loaded down here to allow them to override data-->
+	<!--Load the javascript script-->
+	<script src="javascript/main.js"></script>
+	
+	</body>
+</html>

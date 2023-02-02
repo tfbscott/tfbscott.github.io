@@ -1,0 +1,78 @@
+<html>
+	<head>  
+		<!-- User doesn't see stuff in head -->
+		<meta charset="utf-8">
+		<title>Scott's Portfolio Website</title>
+		<base href="../../" target="_blank">
+		<!--Load the css code-->
+		<link href="css/styles.css" rel="stylesheet">
+		<!--Loading a font from Google Sheets-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto&display=swap" rel="stylesheet"> 
+
+	</head>
+	<body style="margin: 0;">	
+	
+	
+		<div class = "UnderHeader"></div>
+		
+		<div class = "FullSection">
+			<p class = "SectionHeader">
+			System Programming
+			<br>
+			
+			</p>
+			<!--Cleanup-->
+			<div class = "grid-container">
+				<div class = "Block"> 
+					<p class = "BlockText">
+					I learned the benefit of being able to rapidly test and update game projects very early in my DigiPen career. For Cleanup on Aisle 6.67, the levels were loaded from a text file in 14x14 chunks. Each level could feature multiple of these chunks. Since the files were loaded at runtime, we could change the levels without needing to reboot the game. 
+
+					</p>
+				</div>
+				<div  style="text-align: center;">
+					<img src="imgs/cleanup_2.gif" alt="Example" class = "TableImage">
+				</div>
+			</div>	
+			<!--EFO-->
+			<div class = "grid-container">
+				<div  style="text-align: center;">
+					<img src="imgs/efo_1.jpg" alt="Example" class = "TableImage">
+				</div>
+				<div class = "Block">
+					<p class = "BlockText">
+					EFO: Escape from Outworld stored its level and object data inside JSON files. The RapidJSON library was utilized to get deserialization up and running as quickly as possible. The JSON files were passed to a massive factory system that read the file, allocated the required resources, and returned a working object. This allowed levels to easily create objects without bloating compile time with header includes. 
+					<br>
+					Levels were designed in Tiled, an open-source 2D level creation tool. The levels were exported as JSON files and read into our game. This caused a few blocks during development. The JSON format did not play nice with Tiled, and occasionally certain information was omitted during the saving process. To mitigate this, tileset and object data were stored externally in other JSON files. The level creation system would look at the name of the tileset being used and check for a tileset file of the same name. As a bonus, this allowed tilesets to be updated quickly without re-exporting the level. 
+
+
+					</p>
+				</div>
+			</div>
+			<!--Custom-->
+			<div class = "grid-container">
+				<div class = "Block"> 
+					<p class = "BlockText">
+					I have had my hand in quite a few custom engines. Squarepunch, Cleanup on Aisle 6.67, and EFO: Escape from Outworld all used custom engines. Across these projects, I have learned multiple different ways to organize game systems, objects, components, and memory. Over the summer of 2022, I decided to create a small custom engine to experiment with split-screen rendering and input. I also used this project to try and familiarize myself with dynamically linked libraries. Each game system was split into its own library. 
+					<br>
+					As with all first attempts, the result was rough, but I learned a wealth of information about how to set up input systems for multiple controllers and exactly when and where you should use a DLL. 
+					<br>
+					Didn’t use extern “C” enough.
+
+					</p>
+				</div>
+				<div  style="text-align: center;">
+					<img src="imgs/engine_6.gif" alt="Example" class = "TableImage">
+				</div>
+			</div>	
+		</div>	
+		
+		
+	
+	<!--Scripts are loaded down here to allow them to override data-->
+	<!--Load the javascript script-->
+	<script src="javascript/main.js"></script>
+	
+	</body>
+</html>

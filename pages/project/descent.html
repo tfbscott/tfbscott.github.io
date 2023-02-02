@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>  
 		<!-- User doesn't see stuff in head -->
@@ -12,52 +13,8 @@
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto&display=swap" rel="stylesheet"> 
 
 	</head>
-	<body style="margin: 0;">	
-	
-	
-		<div class = "UnderHeader"></div>
-		
-		<div class = "FullSection">
-			<p class = "SectionHeader">
-			The Descent | A.I. Programmer
-			<br>
-			Unreal Engine 5 | 2022
-			<br>
-			IF YOU CAN SEE THIS PAGE SOMETHING WENT WRONG
-			</p>
-			<div class = "grid-container">
-						<div class = "Block"> 
-							<p class = "BlockText">
-							The Descent is a First Person Shooter where you grow and shrink the enemies and enviroment to clear the level. This project is my entry point to Unreal Engine 5.
-							<br>
-							Project Highlights
-								<ul class = "BlockText">
-									<li>Enemies AI leverages Enviroment Query Searches and Unreal Engines Event Driven Behavior Trees </li>
-									<li>Enemies and Objects can crush eachother if there is a major difference in size</li>
-								</ul>
-							</p>
-						</div>
-					<div  style="text-align: center;">
-						<img src="" alt="Example" class = "TableImage">
-					</div>
-			</div>
-			<p class = "SectionHeaderLeft">
-			Artificial Inteligence
-			</p>
-			<div class = "grid-container">
-				<div  style="text-align: center;">
-					<img src="" alt="Code Example" class = "TableImage">
-				</div>
-				<div class = "Block">
-					<p class = "BlockText">
-					
-					</p>
-				</div>
-			</div>
-			
-		</div>	
-		
-		
+	<!--The body has been generated using a tool writen by me that will be on my github shortly-->
+	<body style="margin: 0;"><div class="UnderHeader"></div><div class="FullSection"><p class="SectionHeader">Descent</p><div class="grid-container"><div class="Block"><p class="BlockText">Descent is a 1st Person Rouge-Lite where the player spelunks into dark caverns fighting goblins and lizards. The main combat loop is based on growing and shrinking the enemies and then punching them into each other. Smaller enemies are faster and weaker, while larger enemies are stronger, and slower, and can crush smaller enemies when knocked over.  Over the first 14 weeks, I created a robust enemy A.I. system for two enemy types using Unreal Engine's Behavior Tree and Environment Query System. At the beginning of week 15, the team sat down and forged a new path for the project, giving me the opportunity to take what I learned over 14 weeks and create a stronger A.I. system.</p></div><div class="Block"><iframe class="TableImage" width="100%" height="100%" src="https://www.youtube.com/embed/cFS1xdEEHac" title="Descent Youtube Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div><div class="grid-container"><div class="Block"><div style="text-align: center;"><img class="TableImage" src="imgs/descent_1.gif" alt=""></img></div></div><div class="Block"><p class="BlockText">As the A.I. Programmer, I wanted the enemies to have distinct movement styles that reflected their distinct appearances. Starting in week 15 of development, I began a massive overhaul of our pre-existing movement systems. Since the player benefits from having enemies grouped up, flocking was implemented as a behavior tree node so the Goblin enemies naturally group together when multiple are in a level. Since the lizard enemies have a ranged attack, I implemented a system where they can climb on walls using 2 raycasts and Unreal's flying movement mode. </p></div></div><div class="grid-container"><div class="Block"><p class="BlockText">One area of focus still being explored is enemy personality. With the major A.I. overhauls just wrapping up, I have been focusing on ways to make the enemies seem less like chunks of computer code. I spent some time learning how Unreal 5.1's IK Retargeters work and using them to retarget animations from Mixamo and Blender onto the diverse skeletons of our characters. Plenty of time was also spent experimenting with and improving the Animation Blueprints of our Player and Enemies. Currently, I am using the free Paragon assets as inspiration for Animation Blueprint implementation.</p></div><div class="Block"><div style="text-align: center;"><img class="TableImage" src="imgs/descent_2.gif" alt=""></img></div></div></div></div>
 	
 	<!--Scripts are loaded down here to allow them to override data-->
 	<!--Load the javascript script-->

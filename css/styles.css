@@ -20,6 +20,11 @@ html
 	background:  var(--background-color);
 }
 
+/*
+	So I now know Multiclassing is a thing..
+	DO THAT LATER
+*/
+
 /**********************************************************************
 		HIDDEN LINK
 **********************************************************************/
@@ -230,9 +235,17 @@ Now for the Header Iframe
 {
 	float:right;
 	
-	margin: 10px 5px 10px 30px;
-	
 	display: inline-block;
+}
+
+ .FrontImage
+ {
+	 margin: 10px 5px 10px 30px;
+ }
+
+.CardImage
+{
+	margin: 0px 5px 10px 10px;
 }
 
 .TableImage
@@ -331,7 +344,7 @@ a.Card:hover
 
 .CardSpacer
 {
-	min-height: 18em;
+	/*min-height: 18em;*/
 	
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
@@ -342,7 +355,11 @@ a.Card:hover
 {	
 	margin: 10px 0px;
 	
-	text-align:center;
+	/*text-align:center;*/
+	
+	bottom: 0;
+	
+	/*vertical-align: bottom;*/
 }
 
 .FooterLink
@@ -395,7 +412,7 @@ a.Card:hover
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15em, auto));
+  grid-template-columns: repeat(auto-fit, minmax(25%, auto));
   padding: 10px 20px 10px 20px;
   
   column-gap: 1em;
