@@ -1,12 +1,25 @@
 /*DEFINE VARIABLES HERE*/
 :root{
-	--primary-color: #006783;
+	/*--LIGHT MODE--*/
+	/*--primary-color: #006783;
 	--on-primary-color: #FFFFFF;
 	--primary-container-color: #B7EAFF;
 	--secondary-container-color: #CFE6F1;
 	--on-primary-container-color: #001F2A;
 	--tertiary-color: #5B5B7E;
-	--background-color: #FBFCFE;
+	--background-color: #FBFCFE;*/
+	
+	/*--DARK MODE--*/
+	--primary-color: #5FD4FE;
+	--on-primary-color: #003545;
+	--primary-container-color: #004D63;
+	--on-primary-container-color: #B7EAFF;
+	--secondary-color: #B3CAD5;
+	--secondary-container-color: #B3CAD5;
+	--on-secondary-container-color: #1E333C;
+	--tertiary-color: #C4C3EA;
+	--on-tertiary-color: #2D2D4D;
+	--background-color: #191C1E;
 	
 	--border-radius: 45px;
 }
@@ -57,6 +70,11 @@ html
 .BlockText, .BlockTitle, .CardText, .CardFooter
 {
 	color: var(--on-primary-container-color);
+}
+
+a.Card:hover
+{
+	background: var(--secondary-color);
 }
 
 /**********************************************************************
@@ -335,12 +353,6 @@ a.Card
 	
 	transition: background .25s;
 }
-
-a.Card:hover
-{
-	background: var(--secondary-container-color);
-}
-
 
 .CardSpacer
 {
