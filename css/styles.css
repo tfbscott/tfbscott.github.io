@@ -74,7 +74,7 @@ html
 
 a.Card:hover
 {
-	background: var(--secondary-color);
+	/*background: var(--secondary-color);*/
 }
 
 /**********************************************************************
@@ -222,6 +222,8 @@ Now for the Header Iframe
 	/*Gives the slider for overflow on the section*/
 	overflow-y: visible;
 	overflow-x: auto;
+	/*This should give a 3D affect to the children*/
+	perspective: 50px;
 }
 
 .SectionHeader, .SectionHeaderLeft
@@ -352,6 +354,11 @@ a.Card
 	text-decoration: none;
 	
 	transition: background .25s;
+}
+
+a.Card:hover
+{
+	transform: translateZ(1px);
 }
 
 .CardSpacer
