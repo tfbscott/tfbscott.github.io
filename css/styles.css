@@ -7,7 +7,9 @@
 	--secondary-container-color: #CFE6F1;
 	--on-primary-container-color: #001F2A;
 	--tertiary-color: #5B5B7E;
-	--background-color: #FBFCFE;*/
+	--background-color: #FBFCFE;
+	--on-background-color: #191C1E*/
+	
 	
 	/*--DARK MODE--*/
 	--primary-color: #5FD4FE;
@@ -20,6 +22,7 @@
 	--tertiary-color: #C4C3EA;
 	--on-tertiary-color: #2D2D4D;
 	--background-color: #191C1E;
+	--on-background-color: #E1E3E5;
 	
 	--border-radius: 45px;
 }
@@ -424,7 +427,7 @@ a.Card
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25%, auto));
+  grid-template-columns: repeat(auto-fit, minmax(25em, auto));
   padding: 10px 20px 10px 20px;
   
   column-gap: 1em;
