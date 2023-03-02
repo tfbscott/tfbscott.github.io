@@ -18,7 +18,7 @@ footer.innerHTML = `<div class = "Footer">
 				<a class = "FooterLink" href="index.html">Landing</a>
 			</p>
 			<p class = "FooterText" style = "text-align: center;">
-				<a class = "FooterLink" href="pages/project/descent.html">Descent</a>
+				<a class = "FooterLink" href="pages/project/descent.html">The Descent</a>
 				<a class = "FooterLink" href="pages/project/switch.html">Urban Experiment</a>
 				<a class = "FooterLink" href="pages/project/puppit.html">PUPPIT</a>
 				<a class = "FooterLink" href="pages/project/aops.html">Animations</a>
