@@ -429,6 +429,7 @@ a.Card
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25em, auto));
   padding: 10px 20px 10px 20px;
+  margin: 0px;
   
   column-gap: 1em;
 }
