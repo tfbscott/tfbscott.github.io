@@ -47,11 +47,13 @@
 					<iframe class="TableImage" width="100%" style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/uAowGsvt5AI" title="Descent Youtube Player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
 				</div>
 			</div>
-			<p class="SectionHeaderLeft">Overview</p>
+			<p class="SectionHeaderLeft">Artificial Intelligence Engineer</p>
 			<div class="grid-container">
 				<div class="Block">
 					<p class="BlockText">
-					The Descent is a 1st Person Rouge-Like where the player spelunks into dark caverns fighting goblins and lizards. The main combat loop is based on growing and shrinking the enemies and then punching them into each other. Smaller enemies are faster and weaker, while larger enemies are stronger, and slower, and can crush smaller enemies when knocked over.  Over the first 14 weeks, I created a robust enemy A.I. system for two enemy types using Unreal Engine's Behavior Tree and Environment Query System. At the beginning of week 15, the team sat down and forged a new path for the project, giving me the opportunity to take what I learned over 14 weeks and create a stronger A.I. system.
+						While the team was still exploring the starting idea for The Descent, I researched multiple different A.I. systems to find a suitable system for our project. The two finalists were Goal Oriented Action Planning and Unreal’s Behavior Trees. As the image of The Descent became clearer, the Enemy A.I. plan focused more on simple actions such as chasing the player and assisting downed enemies, so Behavior Trees were picked due to their implementation speed.
+						<br>
+						The first iteration of enemy A.I. leverages Unreal’s Environment Query System to notice changes in the world. Using Unreal’s Lyra project as inspiration, an E.Q.S. system ran every few milliseconds to update blackboard values in the enemy. This blackboard value determined if the enemy was currently focused on the player or assisting a downed enemy. Custom E.Q.S. tests were written in C++ to check an actor’s class and determine if they were a downed enemy. 
 					</p>
 				</div>
 				<div class="Block">
@@ -66,20 +68,47 @@
 				</div>
 				<div class="Block">
 					<p class="BlockText">
-					As the A.I. Programmer, I wanted the enemies to have distinct movement styles that reflected their distinct appearances. Starting in week 15 of development, I began a massive overhaul of our pre-existing movement systems. Since the player benefits from having enemies grouped up, flocking was implemented as a behavior tree node so the Goblin enemies naturally group together when multiple are in a level. Since the lizard enemies have a ranged attack, I implemented a system where they can climb on walls using 2 raycasts and Unreal's flying movement mode. 
+						Starting in week 15 of development, I began a massive overhaul of our pre-existing movement systems. Since the player benefits from having enemies grouped up, flocking was implemented as a behavior tree node, so the Goblin enemies naturally group together when multiple are in a level. Since the lizard enemies have a ranged attack, I implemented a system where they can climb on walls using 2 raycasts and Unreal's flying movement mode.
 					</p>
 				</div>
 			</div>
+			<p class="SectionHeader">Technical Artist</p>
 			<div class="grid-container">
 				<div class="Block">
 					<p class="BlockText">
-					One area of focus still being explored is enemy personality. With the major A.I. overhauls just wrapping up, I have been focusing on ways to make the enemies seem less like chunks of computer code. I spent some time learning how Unreal 5.1's IK Retargeters work and using them to retarget animations from Mixamo and Blender onto the diverse skeletons of our characters. Plenty of time was also spent experimenting with and improving the Animation Blueprints of our Player and Enemies. Currently, I am using the free Paragon assets as inspiration for Animation Blueprint implementation.
+						With the major A.I. overhauls just wrapping up, I have been focusing on ways to make the enemies seem less like chunks of computer code. I spent some time learning how Unreal 5.1's IK Retargeters work and using them to retarget animations from Mixamo and Blender onto the diverse skeletons of our characters. Plenty of time was also spent experimenting with and improving the Animation Blueprints of our Player and Enemies. I am using the free Paragon assets as inspiration for the Animation Blueprint implementation.
 					</p>
 				</div>
 				<div class="Block">
 					<div style="text-align: center;">
 						<img class="TableImage" src="imgs/descent_2.gif" alt=""></img>
 					</div>
+				</div>
+			</div>
+			<div class="grid-container">
+				<div class="Block">
+					<div style="text-align: center;">
+						<img class="TableImage" src="imgs/descent_code_2.png" alt=""></img>
+					</div>
+				</div>
+				<div class="Block">
+					<p class="BlockText">
+						During the Week 14 milestone meeting, one of my peers mentioned that the current color scheme of the enemies didn’t sit well with them. Our two main methods of attack, grow and shrink, were represented by two non-contrasting colors, green and blue. After the milestone meeting, the team took a step back and reorganized our plans for future weeks. I championed creating a system that allows the player to manually change the colors assigned to growing and shrinking to improve accessibility.
+						<br>
+						To accomplish this, I exported the textures for our enemy characters and used Clip Studio to cut the texture into a series of masks, each representing a part of the enemy. A new material was created that applies a color to the base body color using each of the masks. This material accepts each color as a Vector Parameter, allowing enemies to create dynamic material instances that match the currently selected color scheme when spawned.
+					</p>
+				</div>
+			</div>
+			<div class="grid-container">
+				<div class="Block">
+					<div style="text-align: center;">
+						<img class="TableImage" src="imgs/descent_4.png" alt=""></img>
+					</div>
+				</div>
+				<div class="Block">
+					<p class="BlockText">
+						The enemies were now colored using simple colors, making them clash with the realistic environment. Instead of hiding this fact, I created a multi-band cel shader to exemplify the new cartoony look of our enemies. Multiple iterations of the cel shader were created: a hardcoded two-band cel shader to test the look, a multi-band cel shader that imported the band values from a look-up table, and a cel shader that supported colored lights. In the end, a hard-coded multi-band cel shader with colored lights was used, as it was quicker to change band values in the engine than to modify the look-up table externally.
+					</p>
 				</div>
 			</div>
 		</div>
