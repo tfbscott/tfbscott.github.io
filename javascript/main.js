@@ -19,18 +19,21 @@ footer.innerHTML = `<div class = "Footer">
 			</p>
 			<p class = "FooterText" style = "text-align: center;">
 				<a class = "FooterLink" href="pages/project/descent.html">The Descent</a>
-				<a class = "FooterLink" href="pages/project/switch.html">Urban Experiment</a>
+				<a class = "FooterLink" href="pages/project/engine.html">Custom Engine</a>
+				<!--<a class = "FooterLink" href="pages/project/switch.html">Urban Experiment</a>-->
 				<a class = "FooterLink" href="pages/project/puppit.html">PUPPIT</a>
-				<a class = "FooterLink" href="pages/project/aops.html">Animations</a>
+				<!--<a class = "FooterLink" href="pages/project/aops.html">Animations</a>-->
 				<a class = "FooterLink" href="pages/project/efo.html">EFO</a>
-				<a class = "FooterLink" href="pages/project/cleanup.html">Cleanup on Aisle 6.67</a>
-				<a class = "FooterLink" href="pages/project/squarepunch.html">SquarePunch</a>
+				<!--<a class = "FooterLink" href="pages/project/cleanup.html">Cleanup on Aisle 6.67</a>-->
+				<!--<a class = "FooterLink" href="pages/project/squarepunch.html">SquarePunch</a>-->
 			</p>
+			<!--
 			<p class = "FooterText" style = "text-align: center;">
 				<a class = "FooterLink" href="pages/design/3DLevel.html">3D Level</a>
 				<a class = "FooterLink" href="pages/design/2DPCG.html">2D PCG</a>
 				<a class = "FooterLink" href="pages/design/Crafting.html">Economy</a>
 			</p>
+			-->
 			
 		</div>`;
 	
