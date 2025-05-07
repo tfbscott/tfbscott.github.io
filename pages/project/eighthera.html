@@ -1,0 +1,43 @@
+<!DOCTYPE html><html>
+<head>  
+		<!-- User doesn't see stuff in head -->
+		<meta charset="utf-8">
+		<title>Eighth Era Project Page</title>
+		<base href="../../" target="_blank">
+		<!--Load the css code-->
+		<link href="css/styles.css" rel="stylesheet">
+		<!--Loading a font from Google Sheets-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto&display=swap" rel="stylesheet"> 
+
+	</head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-75CBT6RDLM"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-75CBT6RDLM');
+	</script>
+<body style="margin: 0;">
+	<div class="UnderHeader">
+	</div>
+	<div class="FullSection">
+		<p class="SectionHeader">Eighth Era</p>
+		<div class="grid-container">
+			<div class="Block">
+				<p class="BlockText">
+				Eighth Era is a Hero Collector RPG available on iOS and Android Devices and developed by Nice Gang and Perfect Day Games. As one of the software engineers at Perfect Day, I worked on multiple different features and designed robust systems that were handled by many engineers, artists, and designers.</p>
+			</div>
+		<div class="Block">
+			<iframe class="TableImage" width="100%" style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/fQrDQ0HH-Po?si=mhDRqqc_DhCauM3b"  title="Eighth Era Youtube Player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+		</div>
+	</div>
+	<p class="SectionHeader">Battle Animations</p><div class="grid-container"><div class="Block"><div style="text-align: center;"><img class="TableImage" src="imgs/e8_1.gif" alt=""></img></div></div><div class="Block"><p class="BlockText">Early on in the production of Eighth Era, I designed and built the system to handle battle animations. Unity’s Animator Override Controller was leveraged to make the battle animations easy to set up, and actions could choose to play an animation based on an animation type enum if needed.</p></div></div><p class="SectionHeader">Equipment</p><div class="grid-container"><div class="Block"><p class="BlockText">Equipment is one of the many large features I got to sink my teeth into. I worked alongside other engineers and the design department to create a lightweight method of storing Equipment Data in JSON format, allowing the players inventory to be saved on the server. As more features emerged, such as equipment progression and stat changes, the method for storing equipment info was updated to give Design more control when balancing equipment earned in previous builds of the game.</p></div><div class="Block"><div style="text-align: center;"><img class="TableImage" src="imgs/e8_2.png" alt=""></img></div></div></div><p class="SectionHeader">UI Engineering</p><div class="grid-container"><div class="Block"><div style="text-align: center;"><img class="TableImage" src="imgs/e8_3.png" alt=""></img></div></div><div class="Block"><p class="BlockText">Due to our relatively small team size, I often had the responsibility to create the systems that updated and controlled the UI the players interacted with. I work closely with Artists, UI/UX Designers, and Writers to help ensure that everything on screen is as close to their original ideas as possible. This work also involves debugging  performance problems due to Canvas’s rebatching too often or masks taking up too much memory.</p></div></div><p class="SectionHeader">Technical Design</p><div class="grid-container"><div class="Block"><p class="BlockText">As Perfect Day Games grew in size, so did the amount of information changing hands. Technical Design Documents became the de facto way to flesh out complex systems to reduce the amount of confusion when communicating with coworkers. I laid out design documents for multiple current and future features, outlining the system design that multiple engineers across the client and server will implement. </p></div><div class="Block"><div style="text-align: center;"><img class="TableImage" src="imgs/e8_4.png" alt=""></img></div></div></div></div>
+	<!--Scripts are loaded down here to allow them to override data-->
+	<!--Load the javascript script-->
+	<script src="javascript/main.js"></script>
+	
+</body></html>

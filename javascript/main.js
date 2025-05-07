@@ -18,14 +18,15 @@ footer.innerHTML = `<div class = "Footer">
 				<a class = "FooterLink" href="index.html">Landing</a>
 			</p>
 			<p class = "FooterText" style = "text-align: center;">
-				<a class = "FooterLink" href="pages/project/descent.html">The Descent</a>
-				<a class = "FooterLink" href="pages/project/engine.html">Custom Engine</a>
-				<!--<a class = "FooterLink" href="pages/project/switch.html">Urban Experiment</a>-->
-				<a class = "FooterLink" href="pages/project/puppit.html">PUPPIT</a>
-				<!--<a class = "FooterLink" href="pages/project/aops.html">Animations</a>-->
-				<a class = "FooterLink" href="pages/project/efo.html">EFO</a>
-				<!--<a class = "FooterLink" href="pages/project/cleanup.html">Cleanup on Aisle 6.67</a>-->
-				<!--<a class = "FooterLink" href="pages/project/squarepunch.html">SquarePunch</a>-->
+				<a class = "FooterLink" href="pages/project/eighthera.html" target="_self">Eighth Era</a>
+				<a class = "FooterLink" href="pages/project/descent.html" target="_self">The Descent</a>
+				<a class = "FooterLink" href="pages/project/engine.html" target="_self">Custom Engine</a>
+				<!--<a class = "FooterLink" href="pages/project/switch.html" target="_self">Urban Experiment</a>-->
+				<a class = "FooterLink" href="pages/project/puppit.html" target="_self">PUPPIT</a>
+				<!--<a class = "FooterLink" href="pages/project/aops.html" target="_self">Animations</a>-->
+				<a class = "FooterLink" href="pages/project/efo.html" target="_self">EFO</a>
+				<!--<a class = "FooterLink" href="pages/project/cleanup.html" target="_self">Cleanup on Aisle 6.67</a>-->
+				<!--<a class = "FooterLink" href="pages/project/squarepunch.html" target="_self">SquarePunch</a>-->
 			</p>
 			<!--
 			<p class = "FooterText" style = "text-align: center;">
