@@ -31,7 +31,7 @@
 html 
 {
 	font-size:20px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Inter', sans-serif;
 	
 	background:  var(--background-color);
 }
@@ -87,7 +87,7 @@ a.Card:hover
 /*Set Global Font Data*/
 .BlockText, .BlockTitle, .CardText .CardFooter, .PageHeader, .SectionHeader, .SectionHeaderLeft, .ContactButton
 {
-	font-family: 'Roboto';
+	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 400;
 }
