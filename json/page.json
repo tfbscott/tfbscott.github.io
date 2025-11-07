@@ -1,0 +1,41 @@
+{ 
+"eras":[
+{
+	"name": "Perfect Day Games",
+	"projects":[
+	{ 
+	"name":"Eighth Era", 
+	"desc":"Turn Based Hero RPG",
+	"background":"img/eighthEraBG.jpg",
+	"skills":["Unity UI", "Backend Progression Systems", "Deserializing Content from Server"], 
+	"gallery":[
+		{"img":"img/e8_1.gif", "alt":"Gameplay Gif", "desc":"Gif of Gameplay, showing Kickers and UI I maintained."},
+		{"img":"img/e8_2.png", "alt":"Salvage Screen", "desc":"I built an optimized scroll container that can scroll over hundreds of items while maintaining our target framerate."},
+		{"img":"img/e8_3.png", "alt":"Shop Screen", "desc":"The shop UI was built to ensure it could easily scale as more shop items were designed and added."},
+		{"img":"img/e8_4.png", "alt":"Skill Progression", "desc":"I handled both the backend and frontend for systems such as Unit, Equipment, and Skill progression."}
+		]
+	},
+	{ 
+	"name":"HeroBot Quest", 
+	"desc":"Top Down Rouge-Like",
+	"background":"img/heroBotBG.png",
+	"skills":["Behavior Tree", "Agent Pathing", "Optimized Nav Mesh Generation"], 
+	"gallery":[
+		{"img":"img/hq_1.png", "alt":"Gameplay Photo", "desc":"Using a custom Behavior Tree system, enemies could be given custom AI with very little hastle."},
+		{"img":"img/hq_2.png", "alt":"Gameplay Photo with lots of enemies", "desc":"Unity Nav-Meshes were used to let multiple enemies path around the screen."},
+		{"img":"img/hq_3.gif", "alt":"", "desc":"Multiple layers of nav-meshes were used to allow enemies to move over/under each other. The Nav-Mesh was also updated to only ever include open rooms."}
+	]
+	},
+	{ 
+	"name":"Match 3 Prototype", 
+	"desc":"A deterministic Match 3 demo used during RfP",
+	"background":"img/match3BG.png",
+	"skills":["Asynchronous Programming", "Backend System Design"], 
+	"gallery":[
+		{"img":"img/m3_1.gif", "alt":"Gameplay Gif showing cascading pieces", "desc":"The puzzle controller took in an action, such as swapping two pieces or replacing a piece, asynchronously updated the board, and then returned a list of snapshots that a Monobehavior would lerp through."},
+		{"img":"img/m3_2.gif", "alt":"Gameplay Gif showing possible moves", "desc":"An idepended class would analysize the board, looking for possible moves. This algorithm only looked at pieces dirtied by the previous action, reducing the needed calculations."}
+	]
+	}
+	]
+}]
+}
