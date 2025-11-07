@@ -21,6 +21,7 @@
 	--shadow-color: #000000;
 	
 	--outline-color: #9e8c8f;
+	--outline-variant-color: #524345;
 	
 	--border-radius: 45px;
 }
@@ -37,6 +38,11 @@ html{
 	color: var(--on-primary-color);
 }
 
+.primaryButton
+{
+	color: var(--on-primary-container-color);
+}
+
 .secondaryText{
 	color: var(--on-secondary-color);
 }
@@ -50,10 +56,8 @@ html{
 }
 
 .projectText a:visited{
-	color: var(--inverse-primary-color);
+	color: var(--on-secondary-container-color);
 }
-
-.projectText
 
 .tertiaryText{
 	color: var(--on-tertiary-color);
@@ -72,11 +76,45 @@ h1.center {
 	margin: 0em;
 	background: var(--primary-color);
 	border-radius: 0 0 0 var(--border-radius);
+	
+	display: flex;
+	justify-content: space-between;
+}
+
+#headerButtons{
+	display: flex;
+	justify-content: row-reverse;
+}
+
+.primaryButton{
+	
+	text-align: center;
+	
+	margin: 1em 1em 1em 1em;
+	
+	padding: 0.25em 0.25em 0.25em 0.25em;
+	
+	width: 6em;
+	
+	background: var(--primary-container-color);
+	border-radius: var(--border-radius);
+	
+	text-decoration: none;
+	
+	transition: 0.5s;
+}
+
+.primaryButton:hover{
+	margin: 1em 0.75em 1em 0.75em;
+	
+	padding: 0.25em 0.25em 0.25em 0.25em;
+	
+	width: 6.5em;
 }
 
 div.center{
 	margin: auto;
-	width: 70%;
+	max-width: 75em;
 }
 
 p.center, h1.center{
@@ -102,34 +140,42 @@ div.projectBox{
 }
 
 div.projectBox div {
-	width: 40%;
+	max-width: 35em;
+	
+	margin: auto;
 	
 	padding: 0em 0.25em 0em 0.25em;
 }
 
 div.projectBox img {
 	
-	padding: 0em 0.25em 0em 0.25em;
+	margin: 0em 0.25em 0em 0.25em;
 	
-	width: 40%;
+	max-width: 35em;
+	min-width: 0em;
+	height: auto;
 	
 	border-radius: var(--border-radius);
 	
 	object-fit: cover;
 	
-	-webkit-mask-image: linear-gradient(45deg, black, transparent);
-	mask-image: linear-gradient(45deg, black, transparent);
+	border: 1px solid var(--outline-color);
 }
 
-div.gallery, div.projectBox {
+div.gallery, div.projectBox, div.linkBox {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+div.gallery
+{
+	justify-content: center;
 }
 
 div.gallery-item {
   margin: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--outline-color);
   width: 180px;
   
   background: var(--tertiary-container-color);
@@ -137,8 +183,13 @@ div.gallery-item {
   padding: 1em;
 }
 
+div.gallery-item img{
+	border-radius: var(--border-radius);
+	border: 1px solid var(--outline-color);
+}
+
 div.gallery-item:hover {
-  border: 1px solid #777;
+  border: 1px solid var(--outline-variant-color);
 }
 
 div.gallery-item img {
