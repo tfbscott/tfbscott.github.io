@@ -1,4 +1,6 @@
-{ 
+{
+"aboutMe":"Hello there! I am Scottie T. Fado-Bristow.<br><br>As a Software Engineer, I have cut my teeth on multiple live service games. I've helped prototype ideas during incubation, planned out scalable live-service systems, and helped keep the UI and Design teams affloat by creating optimized and simplified Unity UI containers.<br><br>My love for games shines, and I work amongst plushes and figures of my favorite games. I spend my week going to Fighting Game Locals, playing Pool with friends, and writting. If you ever have a few hours to kill, I will gladly pull out my documents for games and narratives and ramble to you.<br><br>If you have any questions or would like additional information, feel free to contact me at <a href='mailto:tfbscott@gmail.com'>tfbscott@gmail.com</a>.",
+"photo":"img/Me_Tokon.jpg",
 "eras":[
 {
 	"name": "Perfect Day Games",
