@@ -149,7 +149,7 @@ div.projectBox div {
 
 div.projectBox img {
 	
-	margin: 0em 0.25em 0em 0.25em;
+	margin: auto;
 	
 	max-width: 35em;
 	min-width: 0em;
