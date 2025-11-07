@@ -1,5 +1,5 @@
 {
-"aboutMe":"Hello there! I am Scottie T. Fado-Bristow.<br><br>As a Software Engineer, I have cut my teeth on multiple live service games. I've helped prototype ideas during incubation, planned out scalable live-service systems, and helped keep the UI and Design teams affloat by creating optimized and simplified Unity UI containers.<br><br>My love for games shines, and I work amongst plushes and figures of my favorite games. I spend my week going to Fighting Game Locals, playing Pool with friends, and writting. If you ever have a few hours to kill, I will gladly pull out my documents for games and narratives and ramble to you.<br><br>If you have any questions or would like additional information, feel free to contact me at <a href='mailto:tfbscott@gmail.com'>tfbscott@gmail.com</a>.",
+"aboutMe":"Hello there! I am Scottie T. Fado-Bristow.<br><br>As a Software Engineer, I have cut my teeth on multiple live service games. I've helped prototype ideas during incubation, planned out scalable live-service systems, and helped the UI and Design teams shine by creating optimized and simplified Unity UI containers.<br><br>I have a massive passion for games; most of my work is amongst plushes and figures of my favorite games. I spend my week going to Fighting Game Locals, playing Pool with friends, and writing. If you ever have a few hours to kill, I will gladly pull out my documents for games and narratives and ramble to you.<br><br>If you have any questions or would like additional information, feel free to contact me at <a href='mailto:tfbscott@gmail.com'>tfbscott@gmail.com</a>.",
 "photo":"img/Me_Tokon.jpg",
 "eras":[
 {
@@ -15,7 +15,11 @@
 		{"img":"img/e8_2.png", "alt":"Salvage Screen", "desc":"I built an optimized scroll container that can scroll over hundreds of items while maintaining our target framerate."},
 		{"img":"img/e8_3.png", "alt":"Shop Screen", "desc":"The shop UI was built to ensure it could easily scale as more shop items were designed and added."},
 		{"img":"img/e8_4.png", "alt":"Skill Progression", "desc":"I handled both the backend and frontend for systems such as Unit, Equipment, and Skill progression."}
-		]
+		],
+	"links":[
+		{"text":"Apple", "dest":"https://apps.apple.com/us/app/eighth-era-epic-hero-quest/id6478184997"},
+		{"text":"Android", "dest":"https://play.google.com/store/apps/details?id=com.perfectday.earth8"},
+	]
 	},
 	{ 
 	"name":"HeroBot Quest", 
@@ -26,6 +30,9 @@
 		{"img":"img/hq_1.png", "alt":"Gameplay Photo", "desc":"Using a custom Behavior Tree system, enemies could be given custom AI with very little hastle."},
 		{"img":"img/hq_2.png", "alt":"Gameplay Photo with lots of enemies", "desc":"Unity Nav-Meshes were used to let multiple enemies path around the screen."},
 		{"img":"img/hq_3.gif", "alt":"", "desc":"Multiple layers of nav-meshes were used to allow enemies to move over/under each other. The Nav-Mesh was also updated to only ever include open rooms."}
+	],
+	"links":[
+		{"text":"Android", "dest":"https://play.google.com/store/apps/details?id=com.perfectday.roguebotquest"}
 	]
 	},
 	{ 
@@ -36,7 +43,8 @@
 	"gallery":[
 		{"img":"img/m3_1.gif", "alt":"Gameplay Gif showing cascading pieces", "desc":"The puzzle controller took in an action, such as swapping two pieces or replacing a piece, asynchronously updated the board, and then returned a list of snapshots that a Monobehavior would lerp through."},
 		{"img":"img/m3_2.gif", "alt":"Gameplay Gif showing possible moves", "desc":"An idepended class would analysize the board, looking for possible moves. This algorithm only looked at pieces dirtied by the previous action, reducing the needed calculations."}
-	]
+	],
+	"links":[]
 	}
 	]
 }]
