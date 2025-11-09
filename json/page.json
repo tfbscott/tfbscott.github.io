@@ -47,5 +47,25 @@
 	"links":[]
 	}
 	]
+},
+{
+	"name": "Solo Projects",
+	"projects":[
+	{
+		"name":"Custom Engine", 
+		"desc":"Couch Multiplayer Shooter in a Custom C++ Engine",
+		"background":"img/engine3.png",
+		"skills":["C++", "Multi-Controller input system", "Graphics Programming", "Kinematics and Collision systems", "C++ static library creation"], 
+		"gallery":[
+			{"img":"img/engine_6.gif", "alt":"Shooter Gameplay Gif", "desc":"This project was a simple couch shooter to explore how input and static libraries worked."},
+			{"img":"img/engine_7.png", "alt":"Project Layout", "desc":"The codebase consists of 5 libaries, reducing compile time and ensuring independent systems stay as disconnected as possible."},
+			{"img":"img/engine_4.png", "alt":"16 player splitscreen", "desc":"The graphics pipeline and input system supported up to 16 splitscreen players at once."},
+			{"img":"img/engine_code_1.png", "alt":"Input System Code", "desc":"The input system was modeled after Unreal's event system, letting any behavior code monitor input events for a specific input device."}
+			],
+		"links":[
+			{"text":"Github Repo", "dest":"https://github.com/tfbscott/custom-engine"}
+	]
+	}
+	]
 }]
 }
