@@ -74,9 +74,9 @@ function CreateHTML(json)
 		}
 	
 		projectsHTML += '</div>';
-	
-		return projectsHTML;
 	}
+	
+	return projectsHTML;
 }
 
 fetch("https://www.scottiet.games/json/page.json")
