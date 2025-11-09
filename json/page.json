@@ -47,5 +47,45 @@
 	"links":[]
 	}
 	]
+},
+{
+	"name": "Solo Projects",
+	"projects":[
+	{
+		"name":"Custom Engine", 
+		"desc":"Couch Multiplayer Shooter in a Custom C++ Engine",
+		"background":"img/engine_3.png",
+		"skills":["C++", "Multi-Controller input system", "Graphics Programming", "Kinematics and Collision systems", "C++ static library creation"], 
+		"gallery":[
+			{"img":"img/engine_6.gif", "alt":"Shooter Gameplay Gif", "desc":"This project was a simple couch shooter to explore how input and static libraries worked."},
+			{"img":"img/engine_7.png", "alt":"Project Layout", "desc":"The codebase consists of 5 libraries, reducing compile time and ensuring independent systems stay as disconnected as possible."},
+			{"img":"img/engine_4.png", "alt":"16 player splitscreen", "desc":"The graphics pipeline and input system supported up to 16 splitscreen players at once."},
+			{"img":"img/engine_code_1.png", "alt":"Input System Code", "desc":"The input system was modeled after Unreal's event system, letting any behavior code monitor input events for a specific input device."}
+			],
+		"links":[
+			{"text":"Github Repo", "dest":"https://github.com/tfbscott/custom-engine"}
+	]
+	}
+	]
+},
+{
+	"name": "Student Projects",
+	"projects":[
+	{
+		"name":"The Descent", 
+		"desc":"Procedurally Generated Rogue-Like Shooter in UE5",
+		"background":"img/descent_3.png",
+		"skills":["UE5", "C++", "Animation Blueprints", "AI Behaviors", "Pathfinding", "Animation Retargeting", "Shaders"], 
+		"gallery":[
+			{"img":"img/descent_1.gif", "alt":"Goblin Pathing Demo", "desc":"Enemy units used a flocking algorithm written in C++ to prevent unit collision.l"},
+			{"img":"img/descent_code_1.png", "alt":"Behavior Tree Layout", "desc":"All enemies had a base behavior tree that drove if the enemy was idle, alert, attacking, or scared."},
+			{"img":"img/descent_2.gif", "alt":"Animation Retargeting Demo", "desc":"Most of the game's animations came from Mixamo's library, and UE5's animation retargeter was used to match the animations onto a distinct set of models."},
+			{"img":"img/descent_4.png", "alt":"Custom Shader Example", "desc":"To improve readability, all enemy units had a custom shader that could change the colors of distinct parts of the enemies."},
+			{"img":"img/descent_code_2.png", "alt":"Custom Shader Code", "desc":"The colors of this custom shader could be controlled by the player, allowing for additional color blind accessibility options."}
+			],
+		"links":[
+	]
+	}
+	]
 }]
 }
