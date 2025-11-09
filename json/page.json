@@ -32,7 +32,7 @@
 		{"img":"img/hq_3.gif", "alt":"", "desc":"Multiple layers of nav-meshes were used to allow enemies to move over/under each other. The Nav-Mesh was also updated to only ever include open rooms."}
 	],
 	"links":[
-		{"text":"Android", "dest":"https://play.google.com/store/apps/details?id=com.perfectday.roguebotquest"}
+		{"text":"Android Alpha (Malaysia Only)", "dest":"https://play.google.com/store/apps/details?id=com.perfectday.roguebotquest"}
 	]
 	},
 	{ 
