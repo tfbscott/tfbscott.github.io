@@ -4,11 +4,9 @@ function CreateHTML(json)
 
 	let projectsHTML = `
 		<div class="projectBox">
-			<div>
-				<h1 class="projectText">About Me</h1>
-				<p class="projectText">${obj.aboutMe}</p>
-			</div>
-			<img src=${obj.photo} alt="Photo of Me"></img>		
+			<iframe src="https://www.youtube.com/embed/gehVNxSILrw"
+			referrerpolicy='strict-origin-when-cross-origin'>
+			</iframe> 		
 		</div>`;
 
 	for(let e = 0; e < obj.eras.length; e++)

@@ -162,6 +162,13 @@ div.projectBox img {
 	border: 1px solid var(--outline-color);
 }
 
+div.projectBox iframe {
+	width: 62em;
+	height: 35em;
+	
+	margin: auto;
+}
+
 div.gallery, div.projectBox, div.linkBox {
   display: flex;
   flex-wrap: wrap;
