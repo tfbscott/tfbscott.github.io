@@ -166,6 +166,8 @@ div.projectBox iframe {
 	width: 62em;
 	height: 35em;
 	
+	border: 0px;
+	
 	margin: auto;
 }
 
