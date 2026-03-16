@@ -4,7 +4,7 @@ function CreateHTML(json)
 
 	let projectsHTML = `
 		<div class="projectBox">
-			<iframe src="https://www.youtube.com/embed/gehVNxSILrw?loop=1&playlist=gehVNxSILrw?&autoplay=1&mute=1"
+			<iframe src="https://www.youtube.com/embed/gehVNxSILrw?loop=1&playlist=gehVNxSILrw&autoplay=1&mute=1"
 			referrerpolicy='strict-origin-when-cross-origin'>
 			</iframe> 		
 		</div>`;
