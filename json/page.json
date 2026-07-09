@@ -11,8 +11,8 @@
 	"background":"img/eighthEraBG.jpg",
 	"skills":["Unity UI", "Backend Progression Systems", "Deserializing Content from Server"], 
 	"gallery":[
-		{"img":"img/e8_1.gif", "alt":"Gameplay Gif", "desc":"Gif of Gameplay, showing Kickers and UI I maintained."},
-		{"img":"img/e8_2.png", "alt":"Salvage Screen", "desc":"I built an optimized scroll container that can scroll over hundreds of items while maintaining our target framerate."},
+		{"img":"img/e8_1.gif", "alt":"Gameplay Gif", "desc":"To get battle up and running, I quickly built centralized animation controllers and a robust system for battle kickers."},
+		{"img":"img/e8_2.png", "alt":"Salvage Screen", "desc":"When performance problems were reported, I built an optimized scroll container that can scroll over hundreds of items while maintaining our target framerate."},
 		{"img":"img/e8_3.png", "alt":"Shop Screen", "desc":"The shop UI was built to ensure it could easily scale as more shop items were designed and added."},
 		{"img":"img/e8_4.png", "alt":"Skill Progression", "desc":"I handled both the backend and frontend for systems such as Unit, Equipment, and Skill progression."}
 		],
